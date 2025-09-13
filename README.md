@@ -1,2 +1,11 @@
-# razorline-site
-Public website for Razorline Labs — EU-first cost-down (cloud/AI) and mandate-ready sprints: Data Act exit, AI Act lite, NIS2 (NL), PQC pilot.
+# Razorline Labs — Spend & Safety
+
+**Cut your cloud & AI bills. Get audit-ready. Pay from savings only.**
+
+- Spend-Down (gainshare): cloud / observability / CDN / LLM (15–30%).
+- Data Act Cloud Exit Pack.
+- EU AI Act Readiness (Lite) + LLMOps guardrails.
+- NIS2 (NL) Readiness Sprint.
+- Post-Quantum (PQC) Readiness Pilot.
+
+📧 hello@razorlinelabs.nl · 🌐 https://razorlinelabs.nl
