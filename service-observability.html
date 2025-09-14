@@ -29,10 +29,13 @@
     <h1 class="lang-en">Datadog → OpenTelemetry Spend-Down</h1>
     <p class="lang-nl">14-daagse sprint om observability-kosten te verlagen zonder signaalverlies.</p>
     <p class="lang-en">14-day sprint to cut observability costs while keeping signal.</p>
-    <a class="cta lang-nl" href="mailto:hello@razorlinelabs.nl">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="mailto:hello@razorlinelabs.nl">Book a 15-minute check</a>
+
+    <!-- Calendly CTA -->
+    <a class="cta lang-nl" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Plan een check van 15 min</a>
+    <a class="cta lang-en" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Book a 15-minute check</a>
   </div>
 </header>
+
 <main class="wrap">
   <div class="card">
     <strong class="lang-nl">Wat we doen</strong>
@@ -67,15 +70,16 @@
 
   <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
 </main>
+
 <footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
+
 <script>
 (function(){
-  const LS='rl_lang'; const body=document.body;
-  const btns=[...document.querySelectorAll('.langbtn')];
-  function apply(l){body.classList.toggle('show-en',l==='en');body.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(b=>b.classList.toggle('active',b.dataset.setLang===l));localStorage.setItem(LS,l);}
-  const saved=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en'; apply(saved);
+  const LS='rl_lang', body=document.body, btns=[...document.querySelectorAll('.langbtn')];
+  function apply(l){body.classList.toggle('show-en',l==='en');body.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(b=>b.classList.toggle('active',b.dataset.setLang===l));localStorage.setItem(LS,l)}
+  const saved=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';
+  apply(saved);
   btns.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.setLang)));
 })();
 </script>
 </body></html>
-
