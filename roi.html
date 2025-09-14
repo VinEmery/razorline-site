@@ -1,5 +1,20 @@
-<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ROI-calculator — Razorline Labs</title>
+<meta name="description" content="Schat besparing en fee in minuten. Typical% voor cloud, observability, LLM en M365.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://razorlinelabs.nl/roi.html">
+<meta name="theme-color" content="#111">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Razorline Labs">
+<meta property="og:title" content="ROI-calculator — Razorline Labs">
+<meta property="og:description" content="Estimate savings and our gainshare fee in minutes.">
+<meta property="og:url" content="https://razorlinelabs.nl/roi.html">
+<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;margin:0;background:#fff;color:#111}
   .wrap{max-width:880px;margin:0 auto;padding:24px;position:relative}
@@ -16,6 +31,7 @@
   body.show-en .lang-nl{display:none}
   body.show-en .lang-en{display:block}
 </style>
+</head>
 <body class="show-nl">
 <div class="wrap">
   <div class="langbar"><button class="langbtn" data-set-lang="nl">NL</button> <button class="langbtn" data-set-lang="en">EN</button></div>
@@ -27,12 +43,17 @@
   <p class="muted lang-en">Enter your monthly spend. We estimate savings with typical percentages. Gainshare fee applies only to Spend-Down.</p>
 
   <table>
-    <tr><th class="lang-nl">Post</th><th class="lang-en">Item</th><th class="lang-nl">Maandbedrag (€)</th><th class="lang-en">Monthly (€)</th></tr>
-    <tr><td colspan="2" class="lang-nl">Cloud (IaaS/PaaS)</td><td colspan="2" class="lang-en">Cloud (IaaS/PaaS)</td><td><input id="cloud" type="number" value="25000"></td></tr>
-    <tr><td colspan="2" class="lang-nl">Observability (Datadog/logs/APM)</td><td colspan="2" class="lang-en">Observability (Datadog/logs/APM)</td><td><input id="obs" type="number" value="8000"></td></tr>
-    <tr><td colspan="2" class="lang-nl">LLM/API inference</td><td colspan="2" class="lang-en">LLM/API inference</td><td><input id="llm" type="number" value="3000"></td></tr>
-    <tr><td colspan="2" class="lang-nl">Microsoft 365/Copilot</td><td colspan="2" class="lang-en">Microsoft 365/Copilot</td><td><input id="m365" type="number" value="2000"></td></tr>
-    <tr><td colspan="2" class="lang-nl">Overig platform</td><td colspan="2" class="lang-en">Other platform</td><td><input id="other" type="number" value="0"></td></tr>
+    <tr>
+      <th class="lang-nl">Post</th>
+      <th class="lang-en">Item</th>
+      <th class="lang-nl">Maandbedrag (€)</th>
+      <th class="lang-en">Monthly (€)</th>
+    </tr>
+    <tr><td colspan="2">Cloud (IaaS/PaaS)</td><td colspan="2"><input id="cloud" type="number" value="25000"></td></tr>
+    <tr><td colspan="2">Observability (Datadog/logs/APM)</td><td colspan="2"><input id="obs" type="number" value="8000"></td></tr>
+    <tr><td colspan="2">LLM/API inference</td><td colspan="2"><input id="llm" type="number" value="3000"></td></tr>
+    <tr><td colspan="2">Microsoft 365/Copilot</td><td colspan="2"><input id="m365" type="number" value="2000"></td></tr>
+    <tr><td colspan="2">Overig / Other</td><td colspan="2"><input id="other" type="number" value="0"></td></tr>
   </table>
 
   <div class="box">
@@ -62,4 +83,5 @@ function calc(){
 function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
 const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';apply(s);btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));})();
 </script>
+</body>
 </html>
