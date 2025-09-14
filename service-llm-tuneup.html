@@ -26,10 +26,13 @@
     <h1 class="lang-en">LLM Cost &amp; Safety Tune-Up</h1>
     <p class="lang-nl">3–4 weken om inference-kosten te verlagen en AI-Act-ready gates toe te voegen.</p>
     <p class="lang-en">3–4 weeks to lower inference spend and add AI-Act-ready gates.</p>
-    <a class="cta lang-nl" href="mailto:hello@razorlinelabs.nl">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="mailto:hello@razorlinelabs.nl">Book a 15-minute check</a>
+
+    <!-- Calendly CTA -->
+    <a class="cta lang-nl" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Plan een check van 15 min</a>
+    <a class="cta lang-en" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Book a 15-minute check</a>
   </div>
 </header>
+
 <main class="wrap">
   <div class="card">
     <strong class="lang-nl">Wat we doen</strong><strong class="lang-en">What we do</strong>
@@ -46,22 +49,30 @@
       <li>Evaluation harness for quality, safety, PII.</li>
     </ul>
   </div>
+
   <div class="card">
     <strong class="lang-nl">Acceptatiecriteria</strong><strong class="lang-en">Acceptance criteria</strong>
     <div class="lang-nl">Latency- & kosten-targets gehaald in evaluatie; guardrails + audit-logs aan; model cards compleet; gated-deploy checklist behaald.</div>
     <div class="lang-en">Latency & cost targets met in eval; guardrails & audit logs enabled; model cards complete; gated deploy checklist passed.</div>
   </div>
+
   <div class="card">
     <strong class="lang-nl">Prijs</strong><strong class="lang-en">Pricing</strong>
     <div class="lang-nl">Vast €20–45k op scope; optioneel care €2–6k/maand voor eval/guardrails.</div>
     <div class="lang-en">Fixed €20–45k by scope; optional care €2–6k/mo for eval/guardrails.</div>
   </div>
+
   <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
 </main>
+
 <footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
+
 <script>
-(function(){const LS='rl_lang',b=document.body,btns=[...document.querySelectorAll('.langbtn')];
-function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
-const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';apply(s);btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));})();
+(function(){
+  const LS='rl_lang', b=document.body, btns=[...document.querySelectorAll('.langbtn')];
+  function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
+  const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en'; apply(s);
+  btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));
+})();
 </script>
 </body></html>
