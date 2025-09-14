@@ -1,36 +1,27 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AWS EKS + RDS Rightsizing — Razorline Labs</title>
 <style>
-  :root{--bg:#111;--ink:#111;--muted:#555;--gold:#D4AF37}
+  :root{--bg:#111;--gold:#D4AF37}
   body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
   .wrap{max-width:900px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:48px 0;border-bottom:1px solid #222}
+  header{background:#111;color:#fff;padding:48px 0;border-bottom:1px solid #222;position:relative}
   .logo{font-weight:800;letter-spacing:.22em}
   header h1{font-size:clamp(28px,4.5vw,44px);margin:10px 0}
   header p{color:#cfcfcf;margin:0}
   .cta{display:inline-block;background:#D4AF37;color:#111;font-weight:700;text-decoration:none;padding:10px 16px;border-radius:10px;margin-top:10px}
   .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff;margin:12px 0}
+  .langbar{position:absolute;top:12px;right:16px}
+  .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer}
+  .langbar button.active{outline:2px solid var(--gold)}
+  .lang-en{display:none}
+  body.show-en .lang-nl{display:none}
+  body.show-en .lang-en{display:block}
 </style>
-<header><div class="wrap">
-  <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
-  <h1>AWS EKS + RDS Rightsizing</h1>
-  <p>3-week sprint for quick, measurable infra wins.</p>
-  <a class="cta" href="mailto:hello@razorlinelabs.nl">Book a 15-minute check</a>
-</div></header>
-<main class="wrap">
-  <div class="card"><strong>What we do</strong>
-    <ul>
-      <li>Right-size nodes and databases; move to Graviton/AMD where fit.</li>
-      <li>Autoscaling, Savings Plans, storage tiering, snapshot lifecycle.</li>
-      <li>NAT/egress cost fixes; baseline FinOps dashboard.</li>
-      <li>Disaster-ready backups and runbooks for critical services.</li>
-    </ul>
-  </div>
-  <div class="card"><strong>Acceptance criteria</strong><br>
-    PRs merged; utilization targets achieved; Savings Plan in place; storage lifecycle policies live; dashboard shows expected reductions.</div>
-  <div class="card"><strong>Pricing</strong><br>
-    Fixed €12–25k dependent on clusters/DBs in scope.</div>
-  <p><a href="/">← Back to home</a></p>
-</main>
-<footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
-</html>
+<body class="show-nl">
+<header>
+  <div class="langbar"><button class="langbtn" data-set-lang="nl">NL</button><button class="langbtn" data-set-lang="en">EN</button></div>
+  <div class="wrap">
+    <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
+    <h1 class="lang-nl">AWS EKS + RDS Rightsizing</h1>
+    <h1 class="lang-en">AWS EKS + RDS Rightsizing</h1>
+    <p class="lang-nl">3-weekse sprint voor snelle, meetbare infra-winst.</p
