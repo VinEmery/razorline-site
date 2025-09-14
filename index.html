@@ -1,48 +1,102 @@
-<!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Razorline Labs — Spend & Safety</title>
-<meta name="description" content="Razorline Labs cuts cloud & AI spend and gets you audit-ready. Data Act exit, AI Act lite, NIS2 (NL), PQC pilot.">
+<meta name="description" content="Razorline Labs verlaagt cloud- & AI-kosten en maakt je audit-klaar. Data Act exit, AI Act lite, NIS2 (NL), PQC pilot.">
 <style>
-  :root{--bg:#111;--ink:#fff;--muted:#cfcfcf;--accent:#C33;--gold:#D4AF37}
-  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
+  :root{--bg:#111;--ink:#fff;--muted:#cfcfcf;--gold:#D4AF37;--iron:#555}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
   .wrap{max-width:1120px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:60px 0;border-bottom:1px solid #222;position:relative;overflow:hidden}
-  header h1{font-size:clamp(28px,4.5vw,48px);line-height:1.05;margin:12px 0}
-  header p{color:var(--muted);margin:6px 0 22px}
+  header{background:#111;color:#fff;padding:56px 0;border-bottom:1px solid #222;position:relative;overflow:hidden}
+  .logo{font-weight:800;letter-spacing:.22em}
+  h1{font-size:clamp(28px,4.5vw,48px);line-height:1.05;margin:12px 0}
+  p.lead{color:var(--muted);margin:6px 0 22px}
   .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:10px}
   .slash{position:absolute;left:-10%;right:-10%;bottom:-35%;height:8px;opacity:.15;background:linear-gradient(90deg,transparent,#fff,transparent);transform:rotate(-12deg)}
+  .langbar{position:absolute;top:12px;right:16px;display:flex;gap:8px}
+  .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;opacity:.9;cursor:pointer}
+  .langbar button.active{outline:2px solid var(--gold)}
   h2{font-size:24px;margin:24px 0 10px}
   .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff}
+  .card a{color:inherit;text-decoration:underline}
   footer{margin:40px 0 20px;color:#555}
-  .logo{font-weight:800;letter-spacing:.2em}
-  .labs{color:#cfcfcf;font-weight:700;letter-spacing:.4em}
+  /* language toggling */
+  .lang-en{display:none}
+  body.show-en .lang-nl{display:none}
+  body.show-en .lang-en{display:block}
 </style>
-
+<body class="show-nl">
 <header>
+  <div class="langbar">
+    <button class="langbtn" data-set-lang="nl">NL</button>
+    <button class="langbtn" data-set-lang="en">EN</button>
+  </div>
   <div class="wrap">
-    <div class="logo" aria-label="Razorline Labs">RAZORLINE <span class="labs">LABS</span></div>
-    <h1>Cut your cloud &amp; AI bills. Get audit-ready. Pay from savings only.</h1>
-    <p>72-hour read-only audit → PRs → verified savings → %-of-savings fee.</p>
-    <a class="cta" href="/contact.html">Book a 15-minute check</a>
+    <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
+    <h1 class="lang-nl">Verlaag uw cloud- &amp; AI-kosten. Word audit-klaar. <span style="white-space:nowrap">Betaal uit besparing*</span>.</h1>
+    <h1 class="lang-en">Cut your cloud &amp; AI bills. Get audit-ready. <span style="white-space:nowrap">Pay from savings*</span>.</h1>
+
+    <p class="lead lang-nl">72-uur read-only audit → PR’s → geverifieerde besparing → %-van-besparing fee. <em>*Alleen voor Spend-Down.</em></p>
+    <p class="lead lang-en">72-hour read-only audit → PRs → verified savings → %-of-savings fee. <em>*Spend-Down only.</em></p>
+
+    <a class="cta lang-nl" href="/contact.html">Plan een check van 15 min</a>
+    <a class="cta lang-en" href="/contact.html">Book a 15-minute check</a>
   </div>
   <div class="slash"></div>
 </header>
 
 <main class="wrap">
-  <h2>What we do</h2>
+  <h2 class="lang-nl">Wat we doen</h2>
+  <h2 class="lang-en">What we do</h2>
   <div class="grid">
-    <div class="card"><strong>Spend-Down (gainshare)</strong><br>15–30% cost reduction on cloud/observability/CDN/LLM. Fee = 25% of verified savings; €0 if &lt;10%.</div>
-    <div class="card"><strong>Data Act Exit Pack</strong><br>Exit drill + portability tests in CI; one-click “Exit Report”.</div>
-    <div class="card"><strong>AI Act Readiness (Lite)</strong><br>Use-case register, eval suite, model cards, audit logs.</div>
-    <div class="card"><strong>NIS2 Sprint (NL)</strong><br>MFA, patch SLAs, central logging, SBOM cadence, incident drill.</div>
-    <div class="card"><strong>PQC Pilot</strong><br>Crypto inventory + hybrid TLS (X25519+Kyber) on one gateway.</div>
+    <div class="card">
+      <strong><a href="/service-observability.html">Datadog → OTel Spend-Down</a></strong><br>
+      <span class="lang-nl">14-daagse sprint om observability-kosten te verlagen zonder signaal te verliezen.</span>
+      <span class="lang-en">14-day sprint to cut observability cost while keeping signal.</span>
+    </div>
+    <div class="card">
+      <strong><a href="/service-llm-tuneup.html">LLM-kosten &amp; Safety Tune-Up</a></strong><br>
+      <span class="lang-nl">Lagere inference-kosten + AI-Act-ready gates.</span>
+      <span class="lang-en">Lower inference spend + AI-Act-ready gates.</span>
+    </div>
+    <div class="card">
+      <strong><a href="/service-eks-rds.html">AWS EKS + RDS Rightsizing</a></strong><br>
+      <span class="lang-nl">Snelle, meetbare infra-winst met PR’s en dashboards.</span>
+      <span class="lang-en">Quick infra wins with PRs and dashboards.</span>
+    </div>
+    <div class="card">
+      <strong><a href="/one-pager.html">One-pager</a></strong><br>
+      <span class="lang-nl">Overzicht, prijzen en bewijs.</span>
+      <span class="lang-en">Overview, pricing and evidence.</span>
+    </div>
+    <div class="card">
+      <strong><a href="/roi.html">ROI-calculator</a></strong><br>
+      <span class="lang-nl">Schat besparing en fee in minuten.</span>
+      <span class="lang-en">Estimate savings and fee in minutes.</span>
+    </div>
   </div>
 </main>
 
 <footer class="wrap">
-  © Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl
+  <div class="lang-nl">© Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl</div>
+  <div class="lang-en">© Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl</div>
 </footer>
+
+<script>
+(function(){
+  const LS='rl_lang';
+  const body=document.body;
+  const btns=[...document.querySelectorAll('.langbtn')];
+  function apply(lang){
+    body.classList.toggle('show-en', lang==='en');
+    body.classList.toggle('show-nl', lang==='nl');
+    document.documentElement.setAttribute('lang', lang);
+    btns.forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
+    localStorage.setItem(LS, lang);
+  }
+  const saved = localStorage.getItem(LS) || (navigator.language||'').toLowerCase().startsWith('nl') ? 'nl' : 'en';
+  apply(saved);
+  btns.forEach(b=>b.addEventListener('click', ()=>apply(b.dataset.setLang)));
+})();
+</script>
+</body>
 </html>
