@@ -1,4 +1,7 @@
-<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Razorline Labs — Spend & Safety</title>
 <meta name="description" content="Razorline Labs verlaagt cloud- & AI-kosten en maakt je audit-klaar. Data Act exit, AI Act lite, NIS2 (NL), PQC pilot.">
 <style>
@@ -32,12 +35,14 @@
   </div>
   <div class="wrap">
     <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
+
     <h1 class="lang-nl">Verlaag uw cloud- &amp; AI-kosten. Word audit-klaar. <span style="white-space:nowrap">Betaal uit besparing*</span>.</h1>
     <h1 class="lang-en">Cut your cloud &amp; AI bills. Get audit-ready. <span style="white-space:nowrap">Pay from savings*</span>.</h1>
 
     <p class="lead lang-nl">72-uur read-only audit → PR’s → geverifieerde besparing → %-van-besparing fee. <em>*Alleen voor Spend-Down.</em></p>
     <p class="lead lang-en">72-hour read-only audit → PRs → verified savings → %-of-savings fee. <em>*Spend-Down only.</em></p>
 
+    <!-- UPDATED: hero button goes to /contact.html (not mailto) -->
     <a class="cta lang-nl" href="/contact.html">Plan een check van 15 min</a>
     <a class="cta lang-en" href="/contact.html">Book a 15-minute check</a>
   </div>
@@ -93,8 +98,10 @@
     btns.forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
     localStorage.setItem(LS, lang);
   }
-  const saved = localStorage.getItem(LS) || (navigator.language||'').toLowerCase().startsWith('nl') ? 'nl' : 'en';
-  apply(saved);
+  const pref = localStorage.getItem(LS);
+  const fallback = ((navigator.language || '').toLowerCase().startsWith('nl')) ? 'nl' : 'en';
+  const initial = pref ? pref : fallback;
+  apply(initial);
   btns.forEach(b=>b.addEventListener('click', ()=>apply(b.dataset.setLang)));
 })();
 </script>
