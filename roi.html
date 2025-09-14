@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROI Calculator — Razorline Labs</title>
+<style>
+  body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;margin:0;background:#fff;color:#111}
+  .wrap{max-width:880px;margin:0 auto;padding:24px}
+  h1{font-size:28px;margin:4px 0 16px}
+  table{width:100%;border-collapse:collapse;margin:10px 0}
+  th,td{border:1px solid #eee;padding:8px 10px;text-align:left}
+  input{width:120px;padding:6px}
+  .muted{color:#666}
+  .box{border:1px solid #eee;border-radius:10px;padding:12px;margin:12px 0;background:#fafafa}
+</style>
+<div class="wrap">
+  <h1>ROI Calculator</h1>
+  <p class="muted">Enter your monthly spend. We estimate savings with typical percentages. Gainshare fee applies only to Spend-Down scope.</p>
+  <table>
+    <tr><th>Item</th><th>Monthly spend (€)</th></tr>
+    <tr><td>Cloud (IaaS/PaaS)</td><td><input id="cloud" type="number" value="25000"></td></tr>
+    <tr><td>Observability (Datadog/logs/APM)</td><td><input id="obs" type="number" value="8000"></td></tr>
+    <tr><td>LLM/API inference</td><td><input id="llm" type="number" value="3000"></td></tr>
+    <tr><td>Microsoft 365/Copilot</td><td><input id="m365" type="number" value="2000"></td></tr>
+    <tr><td>Other platform spend</td><td><input id="other" type="number" value="0"></td></tr>
+  </table>
+
+  <div class="box">
+    <strong>Typical savings assumptions</strong>
+    <div class="muted">Cloud 18%, Observability 40%, LLM 35%, M365 15%, Other 10%.</div>
+  </div>
+
+  <button onclick="calc()">Calculate</button>
+
+  <div id="out" class="box" style="display:none"></div>
+
+  <p><a href="/">← Back to home</a></p>
+</div>
+<script>
+function eur(n){return n.toLocaleString('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+function calc(){
+  const v = id => Number(document.getElementById(id).value||0);
+  const cloud=v('cloud'), obs=v('obs'), llm=v('llm'), m365=v('m365'), other=v('other');
+  const mSave = cloud*0.18 + obs*0.40 + llm*0.35 + m365*0.15 + other*0.10;
+  const ySave = mSave*12;
+  const fee = ySave*0.25;
+  const net = ySave - fee;
+  const out = document.getElementById('out');
+  out.style.display='block';
+  out.innerHTML = `<strong>Results</strong><br>
+  Estimated <em>monthly</em> savings: <strong>${eur(mSave)}</strong><br>
+  Estimated <em>annual</em> savings: <strong>${eur(ySave)}</strong><br>
+  Razorline fee (Spend-Down only, 25% of verified 12-mo savings): <strong>${eur(fee)}</strong><br>
+  Net annual benefit after fee: <strong>${eur(net)}</strong><br>
+  <span class="muted">Fixed-fee sprints (e.g., LLM/EKS/Datadog→OTel) are priced separately.</span>`;
+}
+</script>
