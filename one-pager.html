@@ -1,5 +1,20 @@
-<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>One-pager — Razorline Labs</title>
+<meta name="description" content="Spend & Safety: verlaag cloud- & AI-kosten en word audit-klaar. PR’s + bewijs. Vaste sprints en pay-from-savings voor Spend-Down.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://razorlinelabs.nl/one-pager.html">
+<meta name="theme-color" content="#111">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Razorline Labs">
+<meta property="og:title" content="One-pager — Razorline Labs">
+<meta property="og:description" content="Cut cloud & AI bills and get audit-ready. PRs + evidence. Fixed sprints; gainshare for Spend-Down.">
+<meta property="og:url" content="https://razorlinelabs.nl/one-pager.html">
+<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root{--bg:#111;--gold:#D4AF37;--muted:#555}
   body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
@@ -8,7 +23,7 @@
   .logo{font-weight:800;letter-spacing:.22em}
   h1{font-size:clamp(28px,4.5vw,44px);margin:10px 0}
   p.lead{color:#cfcfcf}
-  .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:10px 16px;border-radius:10px}
+  .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:10px 16px;border-radius:10px;margin-right:8px}
   .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff;margin:12px 0}
   .langbar{position:absolute;top:12px;right:16px}
   .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer}
@@ -17,22 +32,24 @@
   body.show-en .lang-nl{display:none}
   body.show-en .lang-en{display:block}
 </style>
+</head>
 <body class="show-nl">
 <header>
   <div class="langbar"><button class="langbtn" data-set-lang="nl">NL</button><button class="langbtn" data-set-lang="en">EN</button></div>
   <div class="wrap">
     <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
-    <h1 class="lang-nl">Spend & Safety — verlaag cloud- &amp; AI-kosten, word audit-klaar</h1>
-    <h1 class="lang-en">Spend & Safety — cut cloud &amp; AI bills, get audit-ready</h1>
+    <h1 class="lang-nl">Spend &amp; Safety — verlaag cloud- &amp; AI-kosten, word audit-klaar</h1>
+    <h1 class="lang-en">Spend &amp; Safety — cut cloud &amp; AI bills, get audit-ready</h1>
     <p class="lead lang-nl">Wij leveren mergebare PR’s en bewijs. Vaste-prijs sprints voor compliance; pay-from-savings alleen voor Spend-Down.</p>
     <p class="lead lang-en">We ship mergeable PRs and evidence. Fixed-fee sprints for compliance; pay-from-savings only for Spend-Down.</p>
-    <a class="cta lang-nl" href="mailto:hello@razorlinelabs.nl">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="mailto:hello@razorlinelabs.nl">Book a 15-minute check</a>
+    <!-- Calendly CTAs -->
+    <a class="cta lang-nl" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Plan een check van 15 min</a>
+    <a class="cta lang-en" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Book a 15-minute check</a>
   </div>
 </header>
 <main class="wrap">
   <div class="card">
-    <strong class="lang-nl">Gefocusde proposities (najaar 2025)</strong>
+    <strong class="lang-nl">Gefocuste proposities (najaar 2025)</strong>
     <strong class="lang-en">Focused offers (Fall 2025)</strong>
     <ul class="lang-nl">
       <li><strong>Datadog → OTel (14 dagen):</strong> retention & sampling, minder high-cardinality, ruis droppen, OTel waar het loont. Output: PR’s + voor/na-factuur.</li>
@@ -74,4 +91,5 @@
 function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
 const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';apply(s);btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));})();
 </script>
-</body></html>
+</body>
+</html>
