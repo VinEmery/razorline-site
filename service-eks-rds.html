@@ -24,4 +24,44 @@
     <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
     <h1 class="lang-nl">AWS EKS + RDS Rightsizing</h1>
     <h1 class="lang-en">AWS EKS + RDS Rightsizing</h1>
-    <p class="lang-nl">3-weekse sprint voor snelle, meetbare infra-winst.</p
+    <p class="lang-nl">3-weekse sprint voor snelle, meetbare infra-winst.</p>
+    <p class="lang-en">3-week sprint for quick, measurable infra wins.</p>
+    <a class="cta lang-nl" href="mailto:hello@razorlinelabs.nl">Plan een check van 15 min</a>
+    <a class="cta lang-en" href="mailto:hello@razorlinelabs.nl">Book a 15-minute check</a>
+  </div>
+</header>
+<main class="wrap">
+  <div class="card">
+    <strong class="lang-nl">Wat we doen</strong><strong class="lang-en">What we do</strong>
+    <ul class="lang-nl">
+      <li>Nodes & databases right-sizen; migratie naar Graviton/AMD waar passend.</li>
+      <li>Autoscaling, Savings Plans, storage-tiering en snapshot-lifecycle.</li>
+      <li>NAT/egress-kosten verlagen; FinOps-dashboard neerzetten.</li>
+      <li>Back-ups & runbooks voor kritieke services.</li>
+    </ul>
+    <ul class="lang-en">
+      <li>Right-size nodes & databases; move to Graviton/AMD where fit.</li>
+      <li>Autoscaling, Savings Plans, storage tiering, snapshot lifecycle.</li>
+      <li>Fix NAT/egress costs; baseline FinOps dashboard.</li>
+      <li>Disaster-ready backups and runbooks for critical services.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong class="lang-nl">Acceptatiecriteria</strong><strong class="lang-en">Acceptance criteria</strong>
+    <div class="lang-nl">PR’s gemerged; benutting op target; Savings Plan actief; storage-policies live; dashboard toont verwachte reducties.</div>
+    <div class="lang-en">PRs merged; utilization targets achieved; Savings Plan in place; storage policies live; dashboard shows expected reductions.</div>
+  </div>
+  <div class="card">
+    <strong class="lang-nl">Prijs</strong><strong class="lang-en">Pricing</strong>
+    <div class="lang-nl">Vast €12–25k afhankelijk van aantal clusters/databases.</div>
+    <div class="lang-en">Fixed €12–25k depending on clusters/DBs in scope.</div>
+  </div>
+  <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
+</main>
+<footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
+<script>
+(function(){const LS='rl_lang',b=document.body,btns=[...document.querySelectorAll('.langbtn')];
+function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
+const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';apply(s);btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));})();
+</script>
+</body></html>
