@@ -35,73 +35,8 @@
 <link rel="preconnect" href="https://calendly.com" crossorigin>
 <link rel="dns-prefetch" href="https://calendly.com">
 
-<style>
-  :root{
-    --bg:#0a0a0a; --graphite:#151515; --ink:#fff; --muted:#cfcfcf;
-    --blue:#0098ff; --blue-2:#38b6ff; --chip:#161616; --chipbd:#2b2b2b;
-    --card:#fff; --ink2:#1d1d1d;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
-  a{color:inherit}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-
-  /* Nav */
-  .nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid #1f1f1f}
-  .navin{display:flex;align-items:center;justify-content:space-between;padding:12px 0;color:var(--ink)}
-  .brand{font-weight:900;letter-spacing:.22em}
-  .lang{display:flex;gap:8px}
-  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none}
-  .lang .current{outline:2px solid var(--blue)}
-  .btn{display:inline-block;border-radius:12px;padding:10px 14px;font-weight:800;text-decoration:none;transition:.15s transform}
-  .btn:hover{transform:translateY(-1px)}
-  .btn-primary{background:var(--blue);color:#00131f}
-  .btn-outline{border:1px solid #ececec}
-
-  /* Hero */
-  header.hero{position:relative;background:var(--bg);color:var(--ink);padding:64px 0 44px;border-bottom:1px solid #1e1e1e;overflow:hidden}
-  header.hero:before{
-    content:"";position:absolute;inset:-40px -20vw auto -20vw;height:220px;
-    background:linear-gradient(90deg,rgba(0,152,255,.35),rgba(0,152,255,.05));
-    transform:rotate(-8deg);filter:blur(6px);
-  }
-  h1{font-size:clamp(32px,5vw,56px);line-height:1.03;margin:6px 0 10px}
-  .lead{color:var(--muted);margin:0 0 22px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-  .chip{background:var(--chip);border:1px solid var(--chipbd);border-radius:999px;padding:8px 12px;color:#ddd;font-weight:600}
-  .cta-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  .cta-note{color:#b9e3ff;font-size:14px}
-
-  /* Sections */
-  section{padding:40px 0}
-  h2{font-size:24px;margin:0 0 14px}
-  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:var(--card)}
-  .card a{text-decoration:underline}
-
-  /* Steps */
-  .steps{counter-reset:s}
-  .step{position:relative;padding-left:42px}
-  .step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#00131f;font-weight:900;display:grid;place-items:center}
-
-  /* Trust badges */
-  .logos{display:flex;flex-wrap:wrap;gap:18px;opacity:.9}
-  .logo-g{border:1px dashed #cfd8e3;border-radius:10px;padding:10px 14px;color:#4a5568;background:#f7fafc}
-
-  /* FAQ */
-  details{border:1px solid #eee;border-radius:10px;padding:12px 14px;background:#fff}
-  details+details{margin-top:10px}
-  summary{cursor:pointer;font-weight:700}
-
-  footer{padding:28px 0;color:#555;border-top:1px solid #eee;margin-top:30px}
-
-  /* Mobile sticky CTA */
-  .m-cta{position:fixed;inset:auto 16px 16px 16px;background:var(--blue);color:#00131f;
-    border-radius:14px;padding:12px 16px;font-weight:900;display:none;text-align:center;
-    box-shadow:0 8px 24px rgba(0,152,255,.28)}
-  @media(max-width:760px){.m-cta{display:block}}
-  @media (prefers-reduced-motion: reduce){.btn:hover{transform:none}}
-</style>
+<link rel="stylesheet" href="/styles.css">
+<script src="/site.js" defer></script>
 
 <script type="application/ld+json">
 {
