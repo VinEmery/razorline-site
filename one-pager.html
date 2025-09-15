@@ -4,95 +4,152 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>One-pager — Razorline Labs</title>
-<meta name="description" content="Mandaat-klaar in weken: NIS2/DORA/AI Act-controls live met bewijs in 6–10 weken. 15–30% kostenverlaging zonder herschrijven.">
+<meta name="description" content="Overzicht van diensten, aanpak, tijdlijn en prijsmodellen. Sprints, geen audits.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
 <link rel="canonical" href="https://razorlinelabs.nl/one-pager.html">
-<meta name="theme-color" content="#111">
-<meta property="og:type" content="website">
+<link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/one-pager.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="x-default">
+
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="Razorline Labs">
-<meta property="og:title" content="Mandate-ready in weeks — Razorline Labs">
-<meta property="og:description" content="Controls live with evidence in 6–10 weeks. 15–30% cost-down without rewrites.">
+<meta property="og:title" content="One-pager — Sprints, geen audits.">
+<meta property="og:description" content="Overzicht van diensten, aanpak, tijdlijn en prijsmodellen.">
 <meta property="og:url" content="https://razorlinelabs.nl/one-pager.html">
 <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+
 <style>
-  :root{--bg:#111;--gold:#D4AF37;--muted:#555}
-  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
-  .wrap{max-width:980px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:56px 0;border-bottom:1px solid #222;position:relative}
-  .logo{font-weight:800;letter-spacing:.22em}
-  h1{font-size:clamp(28px,4.5vw,44px);margin:10px 0}
-  p.lead{color:#cfcfcf}
-  .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:10px 16px;border-radius:10px;margin-right:8px}
-  .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff;margin:12px 0}
-  .langbar{position:absolute;top:12px;right:16px}
-  .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer}
-  .langbar button.active{outline:2px solid var(--gold)}
-  .lang-en{display:none}
-  body.show-en .lang-nl{display:none}
-  body.show-en .lang-en{display:block}
+  :root{--bg:#0a0a0a;--ink:#fff;--muted:#cfcfcf;--blue:#0098ff;--card:#fff;--ink2:#1d1d1d}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header.hero{background:var(--bg);color:var(--ink);padding:48px 0;border-bottom:1px solid #1e1e1e}
+  h1{margin:0 0 6px;font-size:clamp(28px,4.5vw,46px)}
+  .lead{color:var(--muted);margin:0}
+  nav.top{background:#0d0d0d;color:#fff;border-bottom:1px solid #1f1f1f}
+  nav .in{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{font-weight:900;letter-spacing:.22em}
+  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none;margin-left:8px}
+  .lang .current{outline:2px solid var(--blue)}
+  .btn{display:inline-block;background:var(--blue);color:#00131f;font-weight:900;border-radius:12px;padding:10px 14px;text-decoration:none}
+  section{padding:36px 0}
+  h2{margin:0 0 12px;font-size:24px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+  ul{margin:8px 0 0 16px}
+  .pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;margin-right:6px;background:#fff}
+  footer{padding:28px 0;border-top:1px solid #eee;color:#555;margin-top:32px}
 </style>
 </head>
-<body class="show-nl">
-<header>
-  <div class="langbar"><button class="langbtn" data-set-lang="nl">NL</button><button class="langbtn" data-set-lang="en">EN</button></div>
+<body>
+
+<nav class="top">
+  <div class="wrap in">
+    <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a class="current" href="/one-pager.html">NL</a>
+      <a href="/en/one-pager.html">EN</a>
+      <a class="btn" href="/contact.html" style="margin-left:10px">15-min check</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
   <div class="wrap">
-    <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
-
-    <h1 class="lang-nl">Mandaat-klaar in weken. Verlaag cloud- &amp; AI-kosten veilig.</h1>
-    <h1 class="lang-en">Mandate-ready in weeks. Lower cloud &amp; AI spend safely.</h1>
-
-    <p class="lead lang-nl">Controls (NIS2/DORA/AI Act) live met bewijslast in 6–10 weken. 15–30% besparing zonder herschrijven.</p>
-    <p class="lead lang-en">Controls (NIS2/DORA/AI Act) live with evidence in 6–10 weeks. 15–30% cost-down without rewrites.</p>
-
-    <a class="cta lang-nl" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Book a 15-minute check</a>
+    <h1>Sprints, geen audits.</h1>
+    <p class="lead">Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="card">
-    <strong class="lang-nl">Gefocuste proposities (najaar 2025)</strong>
-    <strong class="lang-en">Focused offers (Fall 2025)</strong>
-    <ul class="lang-nl">
-      <li><strong>Datadog → OTel (14 dagen):</strong> retention & sampling, minder high-cardinality, ruis droppen, OTel waar het loont. Output: PR’s + voor/na-factuur.</li>
-      <li><strong>LLM-kosten & Safety (3–4 wkn):</strong> cache/batching, kleinere/quantized modellen of vLLM/TGI, guardrails + audit-logs (AI-Act-lite). Output: eval + gated deploy.</li>
-      <li><strong>AWS EKS + RDS (3 wkn):</strong> Graviton/AMD, autoscaling, Savings Plans, storage-tiering, snapshots, NAT/egress-fix. Output: PR’s + FinOps-dashboard.</li>
-    </ul>
-    <ul class="lang-en">
-      <li><strong>Datadog → OTel (14 days):</strong> retention & sampling, reduce high-cardinality, drop noise, OTel where it saves. Output: PRs + before/after bill.</li>
-      <li><strong>LLM Cost & Safety (3–4 wks):</strong> cache/batching, smaller/quantized models or vLLM/TGI, guardrails + audit logs (AI-Act-lite). Output: eval + gated deploy.</li>
-      <li><strong>AWS EKS + RDS (3 wks):</strong> Graviton/AMD, autoscaling, Savings Plans, storage tiering, snapshots, NAT/egress fixes. Output: PRs + FinOps dashboard.</li>
-    </ul>
-  </div>
+  <section>
+    <h2>Diensten (fixed-scope)</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>Datadog → OTel Spend-Down (2 wkn)</strong>
+        <ul>
+          <li>Dubbele ingestops detectie & rate-limit</li>
+          <li>Sampling/filters zonder signaalverlies</li>
+          <li>Budget/alerts + dashboard</li>
+          <li><em>Resultaat:</em> 15–30% lagere O11y-kosten</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>LLM-kosten & Safety Tune-Up (3–4 wkn)</strong>
+        <ul>
+          <li>Eval harness (kwaliteit/safety/PII)</li>
+          <li>Prompt-cache / routing / batching</li>
+          <li>Human-in-the-loop gates + auditlog</li>
+          <li><em>Resultaat:</em> AI-Act-ready, lagere spend</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>AWS EKS + RDS Rightsizing (3–4 wkn)</strong>
+        <ul>
+          <li>Requests/limits tuning, autoscaling profielen</li>
+          <li>RDS storage/instance optimalisatie</li>
+          <li>PR’s + dashboards voor ops/finops</li>
+          <li><em>Resultaat:</em> snellere infra, minder kosten</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>NIS2/DORA/AI Act Sprint (6–10 wkn)</strong>
+        <ul>
+          <li>MFA, RBAC/least-privilege, immutabele back-ups</li>
+          <li>Vuln/SBOM pipeline + incident/runbooks</li>
+          <li>Export-evidence: logs, DR-proeven, approvals</li>
+          <li><em>Resultaat:</em> controls live & audit-ready</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong class="lang-nl">Prijzen</strong><strong class="lang-en">Pricing</strong>
-    <ul class="lang-nl">
-      <li><strong>Spend-Down:</strong> 25% van geverifieerde 12-mnd besparing; €0 als &lt;10% bespaard.</li>
-      <li><strong>Sprints (vast):</strong> LLM €20–45k · EKS+RDS €12–25k · Datadog→OTel €8–18k.</li>
-      <li><strong>Care (maandelijks):</strong> €3–9k/maand voor evidence (NIS2/AI-Act/Data Act), drills & verbeteringen.</li>
-    </ul>
-    <ul class="lang-en">
-      <li><strong>Spend-Down:</strong> 25% of verified 12-mo savings; €0 if &lt;10% saved.</li>
-      <li><strong>Sprints (fixed):</strong> LLM €20–45k · EKS+RDS €12–25k · Datadog→OTel €8–18k.</li>
-      <li><strong>Care (monthly):</strong> €3–9k/mo for evidence (NIS2/AI-Act/Data Act), drills & improvements.</li>
-    </ul>
-  </div>
+  <section>
+    <h2>Aanpak</h2>
+    <div class="grid">
+      <div class="card"><strong>1) 72u read-only scan</strong><br>Baseline, quick-wins, scope freeze.</div>
+      <div class="card"><strong>2) Sprintplan</strong><br>Testbare acceptance criteria per deliverable.</div>
+      <div class="card"><strong>3) Build</strong><br>Wekelijkse PR’s & demo’s. Evidence by default.</div>
+      <div class="card"><strong>4) Overdracht</strong><br>Runbooks, exports, 90-dagen verbeterplan.</div>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong class="lang-nl">Bewijs standaard</strong><strong class="lang-en">Evidence by default</strong>
-    <div class="lang-nl">Exports met één klik: logs, DR-bewijzen, SBOMs, model-approvals, incident-reports. Gelegd naast EU-eisen (NIS2, DORA, AI-Act, Data Act).</div>
-    <div class="lang-en">One-click exports: logs, DR proofs, SBOMs, model approvals, incident reports. Mapped to EU requirements (NIS2, DORA, AI-Act, Data Act).</div>
-  </div>
+  <section>
+    <h2>Tijdlijn & prijsmodellen</h2>
+    <div class="card">
+      <div class="pill">Datadog→OTel: 2 wkn</div>
+      <div class="pill">LLM Tune-Up: 3–4 wkn</div>
+      <div class="pill">EKS/RDS: 3–4 wkn</div>
+      <div class="pill">NIS2/DORA/AI Act: 6–10 wkn</div>
+      <p style="margin-top:12px">
+        <strong>Prijs:</strong> vaste prijs per scope. Optioneel <em>pay-from-savings</em> voor cost-down (bij &lt;10% besparing: €0). Vraag de one-pager PDF met bandbreedtes op tijdens de call.
+      </p>
+      <p><a href="/roi.html">→ Snel je ROI inschatten</a></p>
+    </div>
+  </section>
 
-  <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
+  <section>
+    <h2>Wat je krijgt</h2>
+    <div class="grid">
+      <div class="card">📄 <strong>Evidence-exports:</strong> logs, DR-proeven, SBOMs, model-approvals.</div>
+      <div class="card">🔐 <strong>Controls live:</strong> MFA, RBAC, back-ups, vuln pipeline.</div>
+      <div class="card">🧭 <strong>Runbooks:</strong> incident & meldplichten (NIS2/DORA/AI Act).</div>
+      <div class="card">📉 <strong>Kosten omlaag:</strong> 15–30% minder cloud/AI/observability.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <strong>Klaar om te starten?</strong><br>
+      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Plan een 15-min check</a>
+    </div>
+  </section>
 </main>
-<footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
-<script>
-(function(){const LS='rl_lang',b=document.body,btns=[...document.querySelectorAll('.langbtn')];
-function apply(l){b.classList.toggle('show-en',l==='en');b.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(x=>x.classList.toggle('active',x.dataset.setLang===l));localStorage.setItem(LS,l)}
-const s=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';apply(s);btns.forEach(x=>x.addEventListener('click',()=>apply(x.dataset.setLang)));})();
-</script>
+
+<footer class="wrap">© Razorline Labs · <a href="/">Home</a></footer>
 </body>
 </html>
