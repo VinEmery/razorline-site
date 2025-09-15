@@ -3,85 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact — Razorline Labs</title>
-<meta name="description" content="Plan een 15-min kennismaking of mail ons.">
+<title>Plan een 15-min check — Razorline Labs</title>
+<meta name="description" content="Plan een korte haalbaarheidscheck. Geen salespitch.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://razorlinelabs.nl/contact.html">
-<meta name="theme-color" content="#111">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Razorline Labs">
-<meta property="og:title" content="Plan een 15-min kennismaking — Razorline Labs">
-<meta property="og:description" content="Book a short intro call or email hello@razorlinelabs.nl.">
-<meta property="og:url" content="https://razorlinelabs.nl/contact.html">
-<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/contact.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="x-default">
+
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 <style>
-  body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;margin:0;background:#fff;color:#111}
-  .wrap{max-width:720px;margin:0 auto;padding:24px;position:relative}
-  .btn{display:inline-block;background:#D4AF37;color:#111;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
-  .btn.secondary{background:#f0f0f0}
-  .langbar{position:absolute;top:8px;right:12px}
-  .langbar button{background:#111;color:#fff;border:0;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer}
-  .langbar button.active{outline:2px solid #D4AF37}
-  .lang-en{display:none}
-  body.show-en .lang-nl{display:none}
-  body.show-en .lang-en{display:block}
-  p.hint{color:#666}
+  :root{--bg:#0a0a0a;--ink:#fff}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial}
+  header{background:#0a0a0a;color:#fff;padding:20px 24px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  a{color:#0098ff;text-decoration:none}
+  .frame{min-height:780px}
+  .note{color:#666;margin:12px 0}
 </style>
 </head>
-<body class="show-nl">
-<div class="wrap">
-  <div class="langbar">
-    <button class="langbtn" data-set-lang="nl">NL</button>
-    <button class="langbtn" data-set-lang="en">EN</button>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/" style="color:#fff;font-weight:900;letter-spacing:.22em;text-decoration:none">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
   </div>
+</header>
 
-  <h1 class="lang-nl">Plan een check van 15 minuten</h1>
-  <h1 class="lang-en">Book a 15-minute check</h1>
+<main class="wrap">
+  <h1>Plan een 15-min check</h1>
+  <p class="note">Geen salespitch — we valideren of een sprint zinvol is en welke acceptance criteria haalbaar zijn.</p>
 
-  <p class="lang-nl">
-    <a class="btn" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">
-      Plan een 15-min afspraak
-    </a>
-  </p>
-  <p class="lang-en">
-    <a class="btn" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">
-      Book a 15-minute call
-    </a>
-  </p>
+  <div class="calendly-inline-widget frame"
+       data-url="https://calendly.com/hello-razorlinelabs/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0098ff"></div>
+  <script>
+    // Ensure Calendly picks up container height on SPA-ish page loads
+    window.addEventListener('load', () => {
+      if (window.Calendly && Calendly.initInlineWidget) {
+        Calendly.initInlineWidget({
+          url: 'https://calendly.com/hello-razorlinelabs/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0098ff',
+          parentElement: document.querySelector('.calendly-inline-widget')
+        });
+      }
+    });
+  </script>
 
-  <p class="hint lang-nl">Liever per e-mail? Dat kan ook.</p>
-  <p class="hint lang-en">Prefer email? That works too.</p>
-
-  <p class="lang-nl">
-    <a class="btn secondary" href="mailto:hello@razorlinelabs.nl?subject=15-min%20check&body=Provider(s):%0AMaandelijkse%20uitgaven:%0AGrootste%20pijn:%0A">
-      E-mail hello@razorlinelabs.nl
-    </a>
-  </p>
-  <p class="lang-en">
-    <a class="btn secondary" href="mailto:hello@razorlinelabs.nl?subject=15-min%20check&body=Provider(s):%0AMonthly%20spend:%0ABiggest%20pain:%0A">
-      Email hello@razorlinelabs.nl
-    </a>
-  </p>
-
-  <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
-</div>
-
-<script>
-(function(){
-  const LS='rl_lang', body=document.body, btns=[...document.querySelectorAll('.langbtn')];
-  function apply(lang){
-    body.classList.toggle('show-en', lang==='en');
-    body.classList.toggle('show-nl', lang==='nl');
-    document.documentElement.setAttribute('lang', lang);
-    btns.forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
-    localStorage.setItem(LS, lang);
-  }
-  const pref = localStorage.getItem(LS);
-  const fallback = ((navigator.language||'').toLowerCase().startsWith('nl')) ? 'nl' : 'en';
-  apply(pref || fallback);
-  btns.forEach(b=>b.addEventListener('click', ()=>apply(b.dataset.setLang)));
-})();
-</script>
+  <p class="note">Liever een e-mail? <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a></p>
+</main>
 </body>
 </html>
