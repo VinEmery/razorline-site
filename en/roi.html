@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROI calculator — Razorline Labs</title>
+<meta name="description" content="Estimate your savings and optional pay-from-savings fee in minutes.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="canonical" href="https://razorlinelabs.nl/en/roi.html">
+<link rel="alternate" href="https://razorlinelabs.nl/roi.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/roi.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/roi.html" hreflang="x-default">
+
+<meta name="theme-color" content="#0a0a0a">
+<style>
+  :root{--blue:#0098ff}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;background:#fff;color:#1d1d1d}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{background:#0a0a0a;color:#fff;padding:20px 0;border-bottom:1px solid #1e1e1e}
+  h1{margin:8px 0 0}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:24px 0}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+  label{font-weight:700;display:block;margin-bottom:4px}
+  input[type=number],input[type=range]{width:100%}
+  input[type=number]{padding:10px;border:1px solid #e5e7eb;border-radius:8px}
+  .row{display:flex;gap:10px;align-items:center}
+  .btn{display:inline-block;background:var(--blue);color:#00131f;border-radius:10px;padding:10px 14px;font-weight:900;text-decoration:none}
+  .muted{color:#666}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:8px 6px;border-bottom:1px solid #eee;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/en/" style="color:#fff;font-weight:900;letter-spacing:.22em;text-decoration:none">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <h1>ROI calculator</h1>
+    <p class="muted">Indicative; not a quote. For cost-down work our fee is optional as a % of <em>verified</em> savings. If &lt;10% savings: €0.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <div class="card">
+      <label>Monthly cloud + AI spend (€)</label>
+      <input id="spend" type="number" min="0" step="100" value="50000">
+      <div class="row"><small class="muted">Tip: include only the parts we optimise (cloud/observability/LLM)</small></div>
+      <div style="height:12px"></div>
+
+      <label>Expected savings (%)</label>
+      <input id="pct" type="range" min="5" max="40" value="22" oninput="update()">
+      <div class="row">
+        <button type="button" onclick="setPct(15)">15%</button>
+        <button type="button" onclick="setPct(22)">22%</button>
+        <button type="button" onclick="setPct(30)">30%</button>
+        <span class="muted" id="pctLabel" style="margin-left:auto">22%</span>
+      </div>
+
+      <div style="height:12px"></div>
+      <label>Pay-from-savings fee (%) — optional</label>
+      <input id="feePct" type="range" min="0" max="40" value="25" oninput="update()">
+      <div class="row">
+        <span class="muted">0–40%</span><span class="muted" id="feeLabel" style="margin-left:auto">25%</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Result (indicative)</h3>
+      <table>
+        <tr><th></th><th>Per month</th><th>Per year</th></tr>
+        <tr><td>Savings</td><td id="savM">—</td><td id="savY">—</td></tr>
+        <tr><td>Our fee (if chosen)</td><td id="feeM">—</td><td id="feeY">—</td></tr>
+        <tr><td><strong>Net gain</strong></td><td id="netM">—</td><td id="netY">—</td></tr>
+      </table>
+      <p class="muted" id="rule">Rule: if savings &lt;10%, our fee is €0.</p>
+      <a class="btn" href="/contact.html">Discuss your case</a>
+    </div>
+  </div>
+</main>
+
+<script>
+  const € = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'});
+  const spend = document.getElementById('spend');
+  const pct = document.getElementById('pct');
+  const feePct = document.getElementById('feePct');
+  const pctLabel = document.getElementById('pctLabel');
+  const feeLabel = document.getElementById('feeLabel');
+
+  function setPct(v){ pct.value=v; update(); }
+
+  function update(){
+    const s = +spend.value || 0;
+    const p = +pct.value || 0;
+    const f = +feePct.value || 0;
+    pctLabel.textContent = p + '%';
+    feeLabel.textContent = f + '%';
+
+    const savM = s * (p/100);
+    const savY = savM * 12;
+
+    const feeM = (p >= 10) ? savM * (f/100) : 0;
+    const feeY = feeM * 12;
+
+    const netM = savM - feeM;
+    const netY = savY - feeY;
+
+    document.getElementById('savM').textContent = €.format(savM);
+    document.getElementById('savY').textContent = €.format(savY);
+    document.getElementById('feeM').textContent = €.format(feeM);
+    document.getElementById('feeY').textContent = €.format(feeY);
+    document.getElementById('netM').textContent = €.format(netM);
+    document.getElementById('netY').textContent = €.format(netY);
+  }
+  update();
+</script>
+</body>
+</html>
