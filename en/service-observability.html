@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datadog → OTel Spend-Down — Razorline Labs</title>
+<meta name="description" content="14 days to cut observability spend without signal loss. Budgets, alerts and dashboards included.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="canonical" href="https://razorlinelabs.nl/en/service-observability.html">
+<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/service-observability.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="x-default">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Datadog → OTel Spend-Down (2 wks)">
+<meta property="og:description" content="Observability spend 15–30% down without signal loss. Evidence & dashboards.">
+<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{--bg:#0a0a0a;--ink:#fff;--muted:#cfcfcf;--blue:#0098ff;--card:#fff;--ink2:#1d1d1d}
+  *{box-sizing:border-box} body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
+  a{color:inherit} .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  nav{background:#0d0d0d;color:#fff;border-bottom:1px solid #1f1f1f}
+  nav .in{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{font-weight:900;letter-spacing:.22em}
+  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none;margin-left:8px}
+  .lang .current{outline:2px solid var(--blue)}
+  header.hero{background:var(--bg);color:var(--ink);padding:48px 0;border-bottom:1px solid #1e1e1e}
+  h1{margin:0 0 8px;font-size:clamp(28px,4.5vw,46px)} .lead{color:var(--muted);margin:0}
+  section{padding:32px 0} h2{margin:0 0 12px;font-size:24px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+  ul{margin:8px 0 0 18px} .pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;margin-right:6px;background:#fff}
+  .btn{display:inline-block;background:var(--blue);color:#00131f;font-weight:900;border-radius:12px;padding:10px 14px;text-decoration:none}
+  footer{padding:28px 0;border-top:1px solid #eee;color:#555;margin-top:32px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap in">
+    <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a href="/service-observability.html">NL</a>
+      <a class="current" href="/en/service-observability.html">EN</a>
+      <a class="btn" href="/contact.html" style="margin-left:10px">15-minute check</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Datadog → OTel Spend-Down (2 wks)</h1>
+    <p class="lead">15–30% lower observability spend without signal loss. Budgets, alerts and dashboards included.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Deliverables</h2>
+    <div class="grid">
+      <div class="card"><strong>Ingest & sampling</strong><ul>
+        <li>Detect and stop duplicate ingest & noise</li><li>OTel sampling/filters without losing key signals</li><li>Log pipelines & metric cardinality reduction</li></ul></div>
+      <div class="card"><strong>Budgets & alerts</strong><ul>
+        <li>Monthly budgets + real-time alerts per team</li><li>“Cost spike” runbook</li><li>Ownership tagging & cost centres</li></ul></div>
+      <div class="card"><strong>Dashboards & SLOs</strong><ul>
+        <li>Spend dashboards (team/product)</li><li>SLO checks maintain signal/latency</li><li>PRs with config changes</li></ul></div>
+      <div class="card"><strong>Evidence</strong><ul>
+        <li>Before/after spend report</li><li>Change log & exportable evidence</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Acceptance criteria (testable)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>&ge;15%</strong> ingest/spend reduction on agreed scope</li>
+        <li><strong>0</strong> SLO regressions on key signals (error ratio, p95 latency)</li>
+        <li>Budget & alerting enabled with owners</li>
+        <li>Dashboards + export (CSV/JSON) present</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Timeline & pricing</h2>
+    <div class="card">
+      <div class="pill">Duration: 2 weeks</div>
+      <div class="pill">Fixed price per scope</div>
+      <div class="pill">Optional: pay-from-savings</div>
+      <p style="margin-top:10px">Estimate ROI: <a href="/en/roi.html">/en/roi.html</a> · Overview: <a href="/en/one-pager.html">one-pager</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we need</h2>
+    <div class="grid">
+      <div class="card"><strong>Read-only access</strong><ul><li>Datadog/OTel accounts</li><li>Invoice/export last 2 months</li></ul></div>
+      <div class="card"><strong>Contacts</strong><ul><li>Owner per product/team</li><li>Slack/Teams channel</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <strong>Ready to lower costs?</strong><br>
+      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Book a 15-minute check</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">© Razorline Labs · <a href="/en/">Home</a></footer>
+</body>
+</html>
