@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLM Cost & Safety Tune-Up — Razorline Labs</title>
+<meta name="description" content="Lower inference spend with quality intact and AI-Act-ready governance (HITL, audit log, PII filters).">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="canonical" href="https://razorlinelabs.nl/en/service-llm-tuneup.html">
+<link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/service-llm-tuneup.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="x-default">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="LLM Cost & Safety Tune-Up (3–4 wks)">
+<meta property="og:description" content="Spend down, quality steady, governance up.">
+<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{--bg:#0a0a0a;--ink:#fff;--muted:#cfcfcf;--blue:#0098ff;--card:#fff;--ink2:#1d1d1d}
+  *{box-sizing:border-box} body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
+  a{color:inherit} .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  nav{background:#0d0d0d;color:#fff;border-bottom:1px solid #1f1f1f}
+  nav .in{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{font-weight:900;letter-spacing:.22em}
+  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none;margin-left:8px}
+  .lang .current{outline:2px solid var(--blue)}
+  header.hero{background:var(--bg);color:var(--ink);padding:48px 0;border-bottom:1px solid #1e1e1e}
+  h1{margin:0 0 8px;font-size:clamp(28px,4.5vw,46px)} .lead{color:var(--muted);margin:0}
+  section{padding:32px 0} h2{margin:0 0 12px;font-size:24px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+  ul{margin:8px 0 0 18px} .pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;margin-right:6px;background:#fff}
+  .btn{display:inline-block;background:var(--blue);color:#00131f;font-weight:900;border-radius:12px;padding:10px 14px;text-decoration:none}
+  footer{padding:28px 0;border-top:1px solid #eee;color:#555;margin-top:32px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap in">
+    <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a href="/service-llm-tuneup.html">NL</a>
+      <a class="current" href="/en/service-llm-tuneup.html">EN</a>
+      <a class="btn" href="/contact.html" style="margin-left:10px">Book a 15-minute check</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>LLM Cost & Safety Tune-Up (3–4 wks)</h1>
+    <p class="lead">Lower inference spend with quality intact and AI-Act-ready governance (HITL, audit log, PII filters).</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Deliverables</h2>
+    <div class="grid">
+      <div class="card"><strong>Evaluations</strong><ul>
+        <li>Eval harness (quality/safety/PII)</li><li>Baseline vs post-optimisation</li><li>Gate scores per release</li></ul></div>
+      <div class="card"><strong>Cost optimisation</strong><ul>
+        <li>Prompt cache, batching & parallel routing</li><li>Tiered models via router</li><li>Token budgets & timeouts</li></ul></div>
+      <div class="card"><strong>Governance</strong><ul>
+        <li>HITL gates</li><li>PII redaction & policy</li><li>Audit log + export</li></ul></div>
+      <div class="card"><strong>Evidence</strong><ul>
+        <li>Before/after cost report</li><li>Eval report & gate config</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Acceptance criteria</h2>
+    <div class="card">
+      <ul>
+        <li><strong>&ge;15%</strong> lower inference spend on agreed scope</li>
+        <li>No significant drop in quality score vs baseline</li>
+        <li>HITL gates & PII filters active; audit log exportable</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Timeline & pricing</h2>
+    <div class="card">
+      <div class="pill">Duration: 3–4 weeks</div><div class="pill">Fixed price per scope</div>
+      <p style="margin-top:10px">See <a href="/en/roi.html">/en/roi.html</a> and <a href="/en/one-pager.html">one-pager</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we need</h2>
+    <div class="grid">
+      <div class="card"><strong>Read-only access</strong><ul><li>LLM provider/router</li><li>Logging/metrics</li></ul></div>
+      <div class="card"><strong>Datasets</strong><ul><li>Representative prompts</li><li>Evaluation rubrics</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <strong>Ready to cut AI spend?</strong><br>
+      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Book a 15-minute check</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">© Razorline Labs · <a href="/en/">Home</a></footer>
+</body>
+</html>
