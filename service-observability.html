@@ -3,98 +3,113 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Datadog → OpenTelemetry Spend-Down — Razorline Labs</title>
-<meta name="description" content="14-daagse sprint om observability-kosten te verlagen zonder signaalverlies. PR’s, dashboards en factuur-bewijs.">
+<title>Datadog → OTel Spend-Down — Razorline Labs</title>
+<meta name="description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies. Datadog → OTel optimalisaties, budgetten en dashboards.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
 <link rel="canonical" href="https://razorlinelabs.nl/service-observability.html">
-<meta name="theme-color" content="#111">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Razorline Labs">
-<meta property="og:title" content="Datadog → OpenTelemetry Spend-Down — Razorline Labs">
-<meta property="og:description" content="Cut observability spend without losing signal. PRs, guardrails, before/after bill proof.">
-<meta property="og:url" content="https://razorlinelabs.nl/service-observability.html">
+<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/service-observability.html" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="x-default">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Datadog → OTel Spend-Down (2 wkn)">
+<meta property="og:description" content="Observability-kosten 15–30% omlaag zonder signaalverlies. Evidence & dashboards.">
 <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+
 <style>
-  :root{--bg:#111;--ink:#fff;--muted:#cfcfcf;--gold:#D4AF37}
-  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
-  .wrap{max-width:900px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:48px 0;border-bottom:1px solid #222;position:relative}
-  .logo{font-weight:800;letter-spacing:.22em}
-  header h1{font-size:clamp(28px,4.5vw,44px);margin:10px 0}
-  header p{color:#cfcfcf;margin:0}
-  .cta{display:inline-block;background:#D4AF37;color:#111;font-weight:700;text-decoration:none;padding:10px 16px;border-radius:10px;margin-top:10px}
-  .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff;margin:12px 0}
-  .langbar{position:absolute;top:12px;right:16px}
-  .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer}
-  .langbar button.active{outline:2px solid var(--gold)}
-  .lang-en{display:none}
-  body.show-en .lang-nl{display:none}
-  body.show-en .lang-en{display:block}
+  :root{--bg:#0a0a0a;--ink:#fff;--muted:#cfcfcf;--blue:#0098ff;--card:#fff;--ink2:#1d1d1d}
+  *{box-sizing:border-box} body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
+  a{color:inherit} .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  nav{background:#0d0d0d;color:#fff;border-bottom:1px solid #1f1f1f}
+  nav .in{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{font-weight:900;letter-spacing:.22em}
+  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none;margin-left:8px}
+  .lang .current{outline:2px solid var(--blue)}
+  header.hero{background:var(--bg);color:var(--ink);padding:48px 0;border-bottom:1px solid #1e1e1e}
+  h1{margin:0 0 8px;font-size:clamp(28px,4.5vw,46px)}
+  .lead{color:var(--muted);margin:0}
+  section{padding:32px 0} h2{margin:0 0 12px;font-size:24px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+  ul{margin:8px 0 0 18px} .pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;margin-right:6px;background:#fff}
+  .btn{display:inline-block;background:var(--blue);color:#00131f;font-weight:900;border-radius:12px;padding:10px 14px;text-decoration:none}
+  footer{padding:28px 0;border-top:1px solid #eee;color:#555;margin-top:32px}
 </style>
 </head>
-<body class="show-nl">
-<header>
-  <div class="langbar">
-    <button class="langbtn" data-set-lang="nl">NL</button>
-    <button class="langbtn" data-set-lang="en">EN</button>
+<body>
+<nav>
+  <div class="wrap in">
+    <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a class="current" href="/service-observability.html">NL</a>
+      <a href="/en/service-observability.html">EN</a>
+      <a class="btn" href="/contact.html" style="margin-left:10px">15-min check</a>
+    </div>
   </div>
+</nav>
+
+<header class="hero">
   <div class="wrap">
-    <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
-    <h1 class="lang-nl">Datadog → OpenTelemetry Spend-Down</h1>
-    <h1 class="lang-en">Datadog → OpenTelemetry Spend-Down</h1>
-    <p class="lang-nl">14-daagse sprint om observability-kosten te verlagen zonder signaalverlies.</p>
-    <p class="lang-en">14-day sprint to cut observability costs while keeping signal.</p>
-    <a class="cta lang-nl" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="https://calendly.com/hello-razorlinelabs/new-meeting" target="_blank" rel="noopener">Book a 15-minute check</a>
+    <h1>Datadog → OTel Spend-Down (2 wkn)</h1>
+    <p class="lead">15–30% lagere observability-kosten zonder signaalverlies. Budgetten, alerts en dashboards meegeleverd.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="card">
-    <strong class="lang-nl">Wat we doen</strong>
-    <strong class="lang-en">What we do</strong>
-    <ul class="lang-nl">
-      <li>Retention right-sizen en dynamische sampling voor logs/APM.</li>
-      <li>High-cardinality metrics terugbrengen; ruis op bron droppen.</li>
-      <li>OpenTelemetry waar het loont; vendor houden waar het beter is.</li>
-      <li>Guardrails & dashboards; bewijs met voor/na-facturen.</li>
-    </ul>
-    <ul class="lang-en">
-      <li>Right-size retention and add dynamic sampling for logs/APM.</li>
-      <li>Reduce high-cardinality metrics; drop noisy debug logs at source.</li>
-      <li>Adopt OpenTelemetry where it saves; keep vendor where best.</li>
-      <li>Spend guardrails & dashboards; before/after bill evidence.</li>
-    </ul>
-  </div>
+  <section>
+    <h2>Deliverables</h2>
+    <div class="grid">
+      <div class="card"><strong>Ingest & sampling</strong><ul>
+        <li>Dubbele ingestops & ruis detecteren en stoppen</li><li>OTel sampling/filters zonder key signal verlies</li><li>Log pipelines & metric cardinality reductie</li></ul></div>
+      <div class="card"><strong>Budgets & alerts</strong><ul>
+        <li>Maandbudgetten + real-time alerts per team</li><li>Runbook “kosten spike”</li><li>Ownership tagging & cost centers</li></ul></div>
+      <div class="card"><strong>Dashboards & SLO’s</strong><ul>
+        <li>Spend-dashboards (team/product)</li><li>SLO-checks behouden signaal/latency</li><li>PR’s met config-wijzigingen</li></ul></div>
+      <div class="card"><strong>Evidence</strong><ul>
+        <li>Voor/na spend-rapport</li><li>Change log & exporteerbare bewijzen</li></ul></div>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong class="lang-nl">Acceptatiecriteria</strong>
-    <strong class="lang-en">Acceptance criteria</strong>
-    <div class="lang-nl">PR’s gemerged; retention/sampling live; lijst high-cardinality omlaag; dashboard toont ≥X% volumeverlaging; factuur-screenshots vastgelegd.</div>
-    <div class="lang-en">PRs merged; retention/sampling live; high-cardinality list reduced; dashboard shows ≥X% volume drop; bill delta screenshots captured.</div>
-  </div>
+  <section>
+    <h2>Acceptatiecriteria (testbaar)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>&ge;15%</strong> daling in ingest/spend op afgesproken scope</li>
+        <li><strong>0</strong> SLO regressies op key signalen (error-ratio, p95 latency)</li>
+        <li>Budget & alerting actief met owners</li>
+        <li>Dashboards + export (CSV/JSON) aanwezig</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="card">
-    <strong class="lang-nl">Prijs</strong>
-    <strong class="lang-en">Pricing</strong>
-    <div class="lang-nl">Vast €8–18k (afhankelijk van footprint) of gainshare: 25% van geverifieerde 12-mnd besparing.</div>
-    <div class="lang-en">Fixed €8–18k (by footprint) or gainshare: 25% of verified 12-mo savings.</div>
-  </div>
+  <section>
+    <h2>Tijdlijn & prijs</h2>
+    <div class="card">
+      <div class="pill">Duur: 2 weken</div>
+      <div class="pill">Vaste prijs per scope</div>
+      <div class="pill">Optioneel: fee uit besparing</div>
+      <p style="margin-top:10px">Schat je ROI: <a href="/roi.html">/roi.html</a> · Overzicht: <a href="/one-pager.html">one-pager</a></p>
+    </div>
+  </section>
 
-  <p><a href="/">← <span class="lang-nl">Terug naar home</span><span class="lang-en">Back to home</span></a></p>
+  <section>
+    <h2>Wat we nodig hebben</h2>
+    <div class="grid">
+      <div class="card"><strong>Read-only toegang</strong><ul><li>Datadog/OTel accounts</li><li>Factuur/export van laatste 2 maanden</li></ul></div>
+      <div class="card"><strong>Contactpersonen</strong><ul><li>Owner per product/team</li><li>Slack/Teams kanaal</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <strong>Klaar om kosten te verlagen?</strong><br>
+      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Plan een 15-min check</a>
+    </div>
+  </section>
 </main>
 
-<footer class="wrap">© Razorline Labs · hello@razorlinelabs.nl</footer>
-
-<script>
-(function(){
-  const LS='rl_lang', body=document.body, btns=[...document.querySelectorAll('.langbtn')];
-  function apply(l){body.classList.toggle('show-en',l==='en');body.classList.toggle('show-nl',l==='nl');document.documentElement.setAttribute('lang',l);btns.forEach(b=>b.classList.toggle('active',b.dataset.setLang===l));localStorage.setItem(LS,l)}
-  const saved=localStorage.getItem(LS)||(navigator.language||'').toLowerCase().startsWith('nl')?'nl':'en';
-  apply(saved);
-  btns.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.setLang)));
-})();
-</script>
+<footer class="wrap">© Razorline Labs · <a href="/">Home</a></footer>
 </body>
 </html>
