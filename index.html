@@ -3,30 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Razorline Labs — Sprints, not audits.</title>
-<meta name="description" content="Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in 6–10 weeks. 15–30% cost-down without rewrites.">
+
+<title>Razorline Labs — Sprints, geen audits.</title>
+<meta name="description" content="Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Canonical + hreflang -->
 <link rel="canonical" href="https://razorlinelabs.nl/">
-<meta name="theme-color" content="#111">
+<link rel="alternate" href="https://razorlinelabs.nl/" hreflang="nl">
+<link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en">
+<link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Razorline Labs">
-<meta property="og:title" content="Sprints, not audits.">
-<meta property="og:description" content="Controls you can merge. Evidence your auditor can click. 6–10 weeks.">
+<meta property="og:title" content="Sprints, geen audits.">
+<meta property="og:description" content="Controls die je merge’t. Bewijs waar je auditor op klikt. 6–10 weken.">
 <meta property="og:url" content="https://razorlinelabs.nl/">
 <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Razorline Labs — Sprints, geen audits.">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sprints, geen audits.">
+<meta name="twitter:description" content="Controls die je merge’t. Bewijs waar je auditor op klikt. 6–10 weken.">
+<meta name="twitter:image" content="https://razorlinelabs.nl/og-image.png">
+<meta name="twitter:image:alt" content="Razorline Labs — Sprints, geen audits.">
+<meta name="theme-color" content="#111">
+
 <style>
   :root{--bg:#111;--ink:#fff;--muted:#cfcfcf;--gold:#D4AF37;--chip:#1b1b1b;--chipbd:#2a2a2a}
   body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
   .wrap{max-width:1120px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:56px 0;border-bottom:1px solid #222;position:relative;overflow:hidden}
+  header{background:#111;color:#fff;padding:56px 0;border-bottom:1px solid #222;position:relative}
   .logo{font-weight:800;letter-spacing:.22em}
+  .langbar{position:absolute;top:12px;right:16px;display:flex;gap:8px}
+  .langbar a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none}
+  .langbar .current{outline:2px solid var(--gold)}
   h1{font-size:clamp(30px,5vw,56px);line-height:1.03;margin:12px 0}
   p.lead{color:var(--muted);margin:8px 0 22px}
   .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:10px}
-  .langbar{position:absolute;top:12px;right:16px;display:flex;gap:8px}
-  .langbar button{background:#fff;color:#111;border:0;border-radius:8px;padding:6px 10px;font-weight:700;opacity:.9;cursor:pointer}
-  .langbar button.active{outline:2px solid var(--gold)}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
   .chip{background:var(--chip);border:1px solid var(--chipbd);border-radius:999px;padding:8px 12px;color:#ddd;font-weight:600}
   h2{font-size:24px;margin:28px 0 12px}
@@ -34,98 +53,58 @@
   .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff}
   .card a{color:inherit;text-decoration:underline}
   footer{margin:40px 0 20px;color:#555}
-  .lang-en{display:none}
-  body.show-en .lang-nl{display:none}
-  body.show-en .lang-en{display:block}
 </style>
 </head>
-<body class="show-nl">
+<body>
 <header>
   <div class="langbar">
-    <button class="langbtn" data-set-lang="nl">NL</button>
-    <button class="langbtn" data-set-lang="en">EN</button>
+    <a class="current" href="/">NL</a>
+    <a href="/en/">EN</a>
   </div>
   <div class="wrap">
     <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
 
-    <!-- HERO -->
-    <h1 class="lang-nl">Sprints, geen audits.</h1>
-    <h1 class="lang-en">Sprints, not audits.</h1>
+    <h1>Sprints, geen audits.</h1>
+    <p class="lead">Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.</p>
+    <a class="cta" href="/contact.html">Plan een check van 15 min</a>
 
-    <p class="lead lang-nl">Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.</p>
-    <p class="lead lang-en">Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in 6–10 weeks. 15–30% cost-down without rewrites.</p>
-
-    <a class="cta lang-nl" href="/contact.html">Plan een check van 15 min</a>
-    <a class="cta lang-en" href="/contact.html">Book a 15-minute check</a>
-
-    <!-- PROOF BAR -->
     <div class="chips">
-      <div class="chip lang-nl">Vaste scope & tijd (4–10 wkn)</div>
-      <div class="chip lang-en">Fixed scope & time (4–10 wks)</div>
-      <div class="chip lang-nl">Evidence by default (exports)</div>
-      <div class="chip lang-en">Evidence by default (exports)</div>
-      <div class="chip lang-nl">EU-first · geen lock-in</div>
-      <div class="chip lang-en">EU-first · no lock-in</div>
-      <div class="chip lang-nl">Optioneel: fee uit besparing</div>
-      <div class="chip lang-en">Optional: pay-from-savings</div>
+      <div class="chip">Vaste scope & tijd (4–10 wkn)</div>
+      <div class="chip">Evidence by default (exports)</div>
+      <div class="chip">EU-first · geen lock-in</div>
+      <div class="chip">Optioneel: fee uit besparing</div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <h2 class="lang-nl">Wat we doen</h2>
-  <h2 class="lang-en">What we do</h2>
+  <h2>Wat we doen</h2>
   <div class="grid">
     <div class="card">
       <strong><a href="/service-observability.html">Datadog → OTel Spend-Down</a></strong><br>
-      <span class="lang-nl">14 dagen om observability-kosten te verlagen zonder signaalverlies.</span>
-      <span class="lang-en">14 days to cut observability spend while keeping signal.</span>
+      14 dagen om observability-kosten te verlagen zonder signaalverlies.
     </div>
     <div class="card">
       <strong><a href="/service-llm-tuneup.html">LLM-kosten &amp; Safety Tune-Up</a></strong><br>
-      <span class="lang-nl">Lagere inference-kosten + AI-Act-ready gates.</span>
-      <span class="lang-en">Lower inference spend + AI-Act-ready gates.</span>
+      Lagere inference-kosten + AI-Act-ready gates.
     </div>
     <div class="card">
       <strong><a href="/service-eks-rds.html">AWS EKS + RDS Rightsizing</a></strong><br>
-      <span class="lang-nl">Snelle, meetbare infra-winst met PR’s en dashboards.</span>
-      <span class="lang-en">Quick infra wins with PRs and dashboards.</span>
+      Snelle, meetbare infra-winst met PR’s en dashboards.
     </div>
     <div class="card">
       <strong><a href="/one-pager.html">One-pager</a></strong><br>
-      <span class="lang-nl">Overzicht, prijzen en bewijs.</span>
-      <span class="lang-en">Overview, pricing and evidence.</span>
+      Overzicht, prijzen en bewijs.
     </div>
     <div class="card">
       <strong><a href="/roi.html">ROI-calculator</a></strong><br>
-      <span class="lang-nl">Schat besparing en fee in minuten.</span>
-      <span class="lang-en">Estimate savings and fee in minutes.</span>
+      Schat besparing en fee in minuten.
     </div>
   </div>
 </main>
 
 <footer class="wrap">
-  <div class="lang-nl">© Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl</div>
-  <div class="lang-en">© Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl</div>
+  © Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl
 </footer>
-
-<script>
-(function(){
-  const LS='rl_lang';
-  const body=document.body;
-  const btns=[...document.querySelectorAll('.langbtn')];
-  function apply(lang){
-    body.classList.toggle('show-en', lang==='en');
-    body.classList.toggle('show-nl', lang==='nl');
-    document.documentElement.setAttribute('lang', lang);
-    btns.forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
-    localStorage.setItem(LS, lang);
-  }
-  const pref = localStorage.getItem(LS);
-  const fallback = ((navigator.language || '').toLowerCase().startsWith('nl')) ? 'nl' : 'en';
-  apply(pref || fallback);
-  btns.forEach(b=>b.addEventListener('click', ()=>apply(b.dataset.setLang)));
-})();
-</script>
 </body>
 </html>
