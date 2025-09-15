@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
 
 <title>Razorline Labs — Sprints, geen audits.</title>
 <meta name="description" content="Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.">
@@ -14,7 +15,7 @@
 <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en">
 <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default">
 
-<!-- Open Graph -->
+<!-- OG / Twitter -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Razorline Labs">
 <meta property="og:title" content="Sprints, geen audits.">
@@ -25,48 +26,117 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:alt" content="Razorline Labs — Sprints, geen audits.">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sprints, geen audits.">
-<meta name="twitter:description" content="Controls die je merge’t. Bewijs waar je auditor op klikt. 6–10 weken.">
 <meta name="twitter:image" content="https://razorlinelabs.nl/og-image.png">
 <meta name="twitter:image:alt" content="Razorline Labs — Sprints, geen audits.">
-<meta name="theme-color" content="#111">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- Performance -->
+<link rel="preconnect" href="https://calendly.com" crossorigin>
+<link rel="dns-prefetch" href="https://calendly.com">
 
 <style>
-  :root{--bg:#111;--ink:#fff;--muted:#cfcfcf;--gold:#D4AF37;--chip:#1b1b1b;--chipbd:#2a2a2a}
-  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:#111;background:#fff}
-  .wrap{max-width:1120px;margin:0 auto;padding:24px}
-  header{background:#111;color:#fff;padding:56px 0;border-bottom:1px solid #222;position:relative}
-  .logo{font-weight:800;letter-spacing:.22em}
-  .langbar{position:absolute;top:12px;right:16px;display:flex;gap:8px}
-  .langbar a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none}
-  .langbar .current{outline:2px solid var(--gold)}
-  h1{font-size:clamp(30px,5vw,56px);line-height:1.03;margin:12px 0}
-  p.lead{color:var(--muted);margin:8px 0 22px}
-  .cta{display:inline-block;background:var(--gold);color:#111;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:10px}
+  :root{
+    --bg:#0a0a0a; --graphite:#151515; --ink:#fff; --muted:#cfcfcf;
+    --blue:#0098ff; --blue-2:#38b6ff; --chip:#161616; --chipbd:#2b2b2b;
+    --card:#fff; --ink2:#1d1d1d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial;color:var(--ink2);background:#fff}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid #1f1f1f}
+  .navin{display:flex;align-items:center;justify-content:space-between;padding:12px 0;color:var(--ink)}
+  .brand{font-weight:900;letter-spacing:.22em}
+  .lang{display:flex;gap:8px}
+  .lang a{background:#fff;color:#111;border-radius:8px;padding:6px 10px;font-weight:700;text-decoration:none}
+  .lang .current{outline:2px solid var(--blue)}
+  .btn{display:inline-block;border-radius:12px;padding:10px 14px;font-weight:800;text-decoration:none;transition:.15s transform}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--blue);color:#00131f}
+  .btn-outline{border:1px solid #ececec}
+
+  /* Hero */
+  header.hero{position:relative;background:var(--bg);color:var(--ink);padding:64px 0 44px;border-bottom:1px solid #1e1e1e;overflow:hidden}
+  header.hero:before{
+    content:"";position:absolute;inset:-40px -20vw auto -20vw;height:220px;
+    background:linear-gradient(90deg,rgba(0,152,255,.35),rgba(0,152,255,.05));
+    transform:rotate(-8deg);filter:blur(6px);
+  }
+  h1{font-size:clamp(32px,5vw,56px);line-height:1.03;margin:6px 0 10px}
+  .lead{color:var(--muted);margin:0 0 22px}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
   .chip{background:var(--chip);border:1px solid var(--chipbd);border-radius:999px;padding:8px 12px;color:#ddd;font-weight:600}
-  h2{font-size:24px;margin:28px 0 12px}
+  .cta-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .cta-note{color:#b9e3ff;font-size:14px}
+
+  /* Sections */
+  section{padding:40px 0}
+  h2{font-size:24px;margin:0 0 14px}
   .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-  .card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff}
-  .card a{color:inherit;text-decoration:underline}
-  footer{margin:40px 0 20px;color:#555}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px;background:var(--card)}
+  .card a{text-decoration:underline}
+
+  /* Steps */
+  .steps{counter-reset:s}
+  .step{position:relative;padding-left:42px}
+  .step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#00131f;font-weight:900;display:grid;place-items:center}
+
+  /* Trust badges */
+  .logos{display:flex;flex-wrap:wrap;gap:18px;opacity:.9}
+  .logo-g{border:1px dashed #cfd8e3;border-radius:10px;padding:10px 14px;color:#4a5568;background:#f7fafc}
+
+  /* FAQ */
+  details{border:1px solid #eee;border-radius:10px;padding:12px 14px;background:#fff}
+  details+details{margin-top:10px}
+  summary{cursor:pointer;font-weight:700}
+
+  footer{padding:28px 0;color:#555;border-top:1px solid #eee;margin-top:30px}
+
+  /* Mobile sticky CTA */
+  .m-cta{position:fixed;inset:auto 16px 16px 16px;background:var(--blue);color:#00131f;
+    border-radius:14px;padding:12px 16px;font-weight:900;display:none;text-align:center;
+    box-shadow:0 8px 24px rgba(0,152,255,.28)}
+  @media(max-width:760px){.m-cta{display:block}}
+  @media (prefers-reduced-motion: reduce){.btn:hover{transform:none}}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Razorline Labs",
+  "url":"https://razorlinelabs.nl/",
+  "logo":"https://razorlinelabs.nl/og-image.png",
+  "sameAs":["https://www.linkedin.com/company/razorline-labs/"],
+  "contactPoint":[{"@type":"ContactPoint","email":"hello@razorlinelabs.nl","contactType":"sales","areaServed":"NL"}]
+}
+</script>
 </head>
 <body>
-<header>
-  <div class="langbar">
-    <a class="current" href="/">NL</a>
-    <a href="/en/">EN</a>
-  </div>
-  <div class="wrap">
-    <div class="logo">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
 
+<nav class="nav">
+  <div class="wrap navin">
+    <div class="brand">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="lang"><a class="current" href="/">NL</a><a href="/en/">EN</a></div>
+      <a class="btn btn-primary" href="/contact.html">15-min check</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
     <h1>Sprints, geen audits.</h1>
     <p class="lead">Controls die je merge’t. Bewijs waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven.</p>
-    <a class="cta" href="/contact.html">Plan een check van 15 min</a>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/contact.html">Plan een check van 15 min</a>
+      <a class="btn btn-outline" href="/one-pager.html">Bekijk de one-pager</a>
+      <span class="cta-note">Geen salespitch — alleen een haalbaarheidscheck</span>
+    </div>
 
     <div class="chips">
       <div class="chip">Vaste scope & tijd (4–10 wkn)</div>
@@ -77,34 +147,59 @@
   </div>
 </header>
 
-<main class="wrap">
-  <h2>Wat we doen</h2>
-  <div class="grid">
-    <div class="card">
-      <strong><a href="/service-observability.html">Datadog → OTel Spend-Down</a></strong><br>
-      14 dagen om observability-kosten te verlagen zonder signaalverlies.
+<main>
+  <section class="wrap">
+    <h2>Wat we doen</h2>
+    <div class="grid">
+      <div class="card"><strong><a href="/service-observability.html">Datadog → OTel Spend-Down</a></strong><br>14 dagen om observability-kosten te verlagen zonder signaalverlies.</div>
+      <div class="card"><strong><a href="/service-llm-tuneup.html">LLM-kosten &amp; Safety Tune-Up</a></strong><br>Lagere inference-kosten + AI-Act-ready gates.</div>
+      <div class="card"><strong><a href="/service-eks-rds.html">AWS EKS + RDS Rightsizing</a></strong><br>Snelle, meetbare infra-winst met PR’s en dashboards.</div>
+      <div class="card"><strong><a href="/one-pager.html">One-pager</a></strong><br>Overzicht, prijzen en bewijs.</div>
+      <div class="card"><strong><a href="/roi.html">ROI-calculator</a></strong><br>Schat besparing en fee in minuten.</div>
     </div>
-    <div class="card">
-      <strong><a href="/service-llm-tuneup.html">LLM-kosten &amp; Safety Tune-Up</a></strong><br>
-      Lagere inference-kosten + AI-Act-ready gates.
+  </section>
+
+  <section class="wrap">
+    <h2>Wat je krijgt (acceptatiecriteria)</h2>
+    <div class="grid">
+      <div class="card">📄 <strong>Evidence-exports</strong>: logs/DR-proeven/SBOMs/model-approvals met één klik.</div>
+      <div class="card">🔐 <strong>Controls live</strong>: MFA, RBAC/least-privilege, immutabele back-ups, vuln-pipeline.</div>
+      <div class="card">🧭 <strong>Runbooks</strong>: incident & rapportage-flows (NIS2/DORA/AI Act) + 90-dagenplan.</div>
+      <div class="card">📉 <strong>Kosten omlaag</strong>: 15–30% minder cloud/observability/LLM zonder herschrijven.</div>
     </div>
-    <div class="card">
-      <strong><a href="/service-eks-rds.html">AWS EKS + RDS Rightsizing</a></strong><br>
-      Snelle, meetbare infra-winst met PR’s en dashboards.
+  </section>
+
+  <section class="wrap">
+    <h2>Hoe het werkt</h2>
+    <div class="grid steps">
+      <div class="card step"><strong>72u read-only scan</strong> → baseline en quick-wins.</div>
+      <div class="card step"><strong>Sprintplan</strong> met <em>testbare</em> acceptance criteria.</div>
+      <div class="card step"><strong>Build</strong> (4–10 wkn) met wekelijkse PR’s & demo’s.</div>
+      <div class="card step"><strong>Evidence</strong> en overdracht; optionele maandelijkse borging.</div>
     </div>
-    <div class="card">
-      <strong><a href="/one-pager.html">One-pager</a></strong><br>
-      Overzicht, prijzen en bewijs.
+  </section>
+
+  <section class="wrap">
+    <h2>Vertrouwen</h2>
+    <div class="logos">
+      <div class="logo-g">Logo A</div><div class="logo-g">Logo B</div>
+      <div class="logo-g">Logo C</div><div class="logo-g">Logo D</div>
     </div>
-    <div class="card">
-      <strong><a href="/roi.html">ROI-calculator</a></strong><br>
-      Schat besparing en fee in minuten.
-    </div>
-  </div>
+  </section>
+
+  <section class="wrap">
+    <h2>FAQ</h2>
+    <details><summary>Werken jullie ook met pay-from-savings?</summary><p>Ja, voor cost-down trajecten. Bij &lt;10% besparing rekenen we €0; daarboven een % van de gerealiseerde winst.</p></details>
+    <details><summary>Leveren jullie evidence in het Nederlands?</summary><p>Standaard NL; Engels op verzoek voor alle exports, runbooks en PR-samenvattingen.</p></details>
+    <details><summary>24/7 ondersteuning?</summary><p>Wij borgen controls & evidence maandelijks; 24/7 kan via onze MSSP-partner.</p></details>
+  </section>
 </main>
 
 <footer class="wrap">
   © Razorline Labs · <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> · razorlinelabs.nl
 </footer>
+
+<!-- Mobile sticky CTA -->
+<a class="m-cta" href="/contact.html">Plan een check van 15 min</a>
 </body>
 </html>
