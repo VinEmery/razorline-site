@@ -1,104 +1,201 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ROI calculator — Razorline Labs</title>
-<meta name="description" content="Estimate your savings and optional pay-from-savings fee in minutes.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ROI Calculator — Razorline Labs</title>
+  <meta name="description" content="Estimate your savings and (optional) pay-from-savings fee in minutes.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://razorlinelabs.nl/en/roi.html">
-<link rel="alternate" href="https://razorlinelabs.nl/roi.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/roi.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/roi.html" hreflang="x-default">
+  <link rel="canonical" href="https://razorlinelabs.nl/en/roi.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/roi.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/roi.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/roi.html" hreflang="x-default">
 
-<meta name="theme-color" content="#0a0a0a">
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Razorline Labs">
+  <meta property="og:title" content="ROI Calculator — Razorline Labs">
+  <meta property="og:description" content="Estimate your savings and optional gainshare fee in minutes.">
+  <meta property="og:url" content="https://razorlinelabs.nl/en/roi.html">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://razorlinelabs.nl/#org",
+       "name":"Razorline Labs","url":"https://razorlinelabs.nl/",
+       "logo":{"@type":"ImageObject","url":"https://razorlinelabs.nl/og-image.png"},
+       "email":"hello@razorlinelabs.nl","areaServed":["NL","EU"]},
+      {"@type":"WebSite","@id":"https://razorlinelabs.nl/#website",
+       "url":"https://razorlinelabs.nl/","name":"Razorline Labs",
+       "inLanguage":"en-GB","publisher":{"@id":"https://razorlinelabs.nl/#org"}}
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
+  <style>
+    .calc {max-width:850px;margin:0 auto}
+    .calc .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .calc label{font-weight:600}
+    .calc input, .calc select{width:100%;padding:10px;border:1px solid #333;border-radius:10px;background:#0f0f10;color:#eee}
+    .calc .out{background:#111;border:1px solid #2a2a2a;border-radius:16px;padding:16px}
+    .muted{opacity:.75}
+  </style>
 </head>
 <body>
-<header>
+
+<nav class="top nav">
+  <div class="wrap in navin">
+    <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a href="/roi.html">NL</a>
+      <a class="current" href="/en/roi.html">EN</a>
+      <a class="btn btn-outline" href="/en/">Home</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
   <div class="wrap">
-    <a href="/en/" style="color:#fff;font-weight:900;letter-spacing:.22em;text-decoration:none">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
-    <h1>ROI calculator</h1>
-    <p class="muted">Indicative; not a quote. For cost-down work our fee is optional as a % of <em>verified</em> savings. If &lt;10% savings: €0.</p>
+    <h1>ROI Calculator</h1>
+    <p class="lead">Estimate savings and optional pay-from-savings fee in minutes.</p>
   </div>
 </header>
 
-<main class="wrap">
-  <div class="grid">
-    <div class="card">
-      <label>Monthly cloud + AI spend (€)</label>
-      <input id="spend" type="number" min="0" step="100" value="50000">
-      <div class="row"><small class="muted">Tip: include only the parts we optimise (cloud/observability/LLM)</small></div>
-      <div style="height:12px"></div>
-
-      <label>Expected savings (%)</label>
-      <input id="pct" type="range" min="5" max="40" value="22" oninput="update()">
-      <div class="row">
-        <button type="button" onclick="setPct(15)">15%</button>
-        <button type="button" onclick="setPct(22)">22%</button>
-        <button type="button" onclick="setPct(30)">30%</button>
-        <span class="muted" id="pctLabel" style="margin-left:auto">22%</span>
+<main class="wrap calc">
+  <section class="card">
+    <div class="row">
+      <div>
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="ot">Datadog → OTel (observability)</option>
+          <option value="llm">LLM Cost & Safety Tune-Up</option>
+          <option value="eks">AWS EKS + RDS rightsizing</option>
+          <option value="custom">Other / general</option>
+        </select>
       </div>
-
-      <div style="height:12px"></div>
-      <label>Pay-from-savings fee (%) — optional</label>
-      <input id="feePct" type="range" min="0" max="40" value="25" oninput="update()">
-      <div class="row">
-        <span class="muted">0–40%</span><span class="muted" id="feeLabel" style="margin-left:auto">25%</span>
+      <div>
+        <label for="monthly">Current monthly spend (€)</label>
+        <input id="monthly" type="number" min="0" step="100" placeholder="e.g., 25,000">
       </div>
     </div>
 
-    <div class="card">
-      <h3 style="margin-top:0">Result (indicative)</h3>
-      <table>
-        <tr><th></th><th>Per month</th><th>Per year</th></tr>
-        <tr><td>Savings</td><td id="savM">—</td><td id="savY">—</td></tr>
-        <tr><td>Our fee (if chosen)</td><td id="feeM">—</td><td id="feeY">—</td></tr>
-        <tr><td><strong>Net gain</strong></td><td id="netM">—</td><td id="netY">—</td></tr>
-      </table>
-      <p class="muted" id="rule">Rule: if savings &lt;10%, our fee is €0.</p>
-      <a class="btn" href="/contact.html">Discuss your case</a>
+    <div class="row" style="margin-top:12px">
+      <div>
+        <label for="reduction">Expected reduction (%)</label>
+        <select id="reduction">
+          <option value="15">15%</option>
+          <option value="20" selected>20%</option>
+          <option value="25">25%</option>
+          <option value="30">30%</option>
+          <option value="35">35%</option>
+        </select>
+        <p class="muted" id="hint">Guide: 15–30% for most sprints.</p>
+      </div>
+      <div>
+        <label for="model">Fee model</label>
+        <select id="model">
+          <option value="gainshare" selected>Optional gainshare (25% of savings)</option>
+          <option value="fixed">Fixed sprint (quote)</option>
+        </select>
+      </div>
     </div>
-  </div>
+
+    <div class="out" style="margin-top:16px">
+      <div class="row">
+        <div>
+          <div class="muted">Annual savings (est.)</div>
+          <h2 id="saveYear">—</h2>
+        </div>
+        <div>
+          <div class="muted">Monthly savings</div>
+          <h3 id="saveMonth">—</h3>
+        </div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div>
+          <div class="muted">Indicative gainshare fee (25%)</div>
+          <h3 id="fee">—</h3>
+        </div>
+        <div>
+          <div class="muted">Break-even (fixed sprint, indicative)</div>
+          <h3 id="breakeven">—</h3>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px">
+      <a class="btn btn-primary" href="/contact.html">Book 15-min check</a>
+    </div>
+  </section>
 </main>
 
+<footer class="wrap">© Razorline Labs · <a href="/en/privacy.html">Privacy</a></footer>
+
 <script>
-  const € = new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'});
-  const spend = document.getElementById('spend');
-  const pct = document.getElementById('pct');
-  const feePct = document.getElementById('feePct');
-  const pctLabel = document.getElementById('pctLabel');
-  const feeLabel = document.getElementById('feeLabel');
+(function(){
+  const category = document.getElementById('category');
+  const monthly  = document.getElementById('monthly');
+  const reduction= document.getElementById('reduction');
+  const model    = document.getElementById('model');
+  const saveY    = document.getElementById('saveYear');
+  const saveM    = document.getElementById('saveMonth');
+  const feeEl    = document.getElementById('fee');
+  const beEl     = document.getElementById('breakeven');
+  const hint     = document.getElementById('hint');
 
-  function setPct(v){ pct.value=v; update(); }
+  const presets = {
+    ot:   {redHint:'Often 20–30% via sampling/OTel/agg.', defMonthly:25000, defRed:25},
+    llm:  {redHint:'Often 20–40% via kv-cache, batching, evals.', defMonthly:20000, defRed:25},
+    eks:  {redHint:'Often 15–30% via rightsizing & RDS plans.', defMonthly:30000, defRed:20},
+    custom:{redHint:'Use your best estimate.', defMonthly:20000, defRed:20}
+  };
 
-  function update(){
-    const s = +spend.value || 0;
-    const p = +pct.value || 0;
-    const f = +feePct.value || 0;
-    pctLabel.textContent = p + '%';
-    feeLabel.textContent = f + '%';
-
-    const savM = s * (p/100);
-    const savY = savM * 12;
-
-    const feeM = (p >= 10) ? savM * (f/100) : 0;
-    const feeY = feeM * 12;
-
-    const netM = savM - feeM;
-    const netY = savY - feeY;
-
-    document.getElementById('savM').textContent = €.format(savM);
-    document.getElementById('savY').textContent = €.format(savY);
-    document.getElementById('feeM').textContent = €.format(feeM);
-    document.getElementById('feeY').textContent = €.format(feeY);
-    document.getElementById('netM').textContent = €.format(netM);
-    document.getElementById('netY').textContent = €.format(netY);
+  function €(n){ return n.toLocaleString('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0}); }
+  function monthsToHuman(m){
+    if(!isFinite(m)||m<=0) return '—';
+    if(m<1) return 'less than 1 month';
+    return `${Math.round(m)} mo`;
   }
-  update();
+
+  function applyPreset(){
+    const p = presets[category.value];
+    hint.textContent = `Guide: ${p.redHint}`;
+    if(!monthly.value) monthly.value = p.defMonthly;
+    reduction.value = p.defRed;
+    calc();
+  }
+
+  function calc(){
+    const m = Math.max(0, Number(monthly.value||0));
+    const r = Number(reduction.value||0)/100;
+    const ySave = m * 12 * r;
+    const mSave = m * r;
+    saveY.textContent = €(ySave);
+    saveM.textContent = €(mSave);
+
+    const gainshareFee = ySave * 0.25;
+    if(model.value==='gainshare'){
+      feeEl.textContent = €(gainshareFee);
+      beEl.textContent  = '—';
+    } else {
+      feeEl.textContent = 'On quote';
+      const fixed = mSave * 2.5;
+      beEl.textContent = monthsToHuman(fixed/mSave);
+    }
+  }
+  ['change','keyup','input'].forEach(evt=>{
+    monthly.addEventListener(evt,calc);
+    reduction.addEventListener(evt,calc);
+    model.addEventListener(evt,calc);
+    category.addEventListener(evt,applyPreset);
+  });
+  applyPreset();
+})();
 </script>
 </body>
 </html>
