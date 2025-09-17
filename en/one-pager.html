@@ -1,135 +1,165 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>One-pager — Razorline Labs</title>
-<meta name="description" content="Overview of services, approach, timeline and pricing models. Sprints, not audits.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One-pager — Razorline Labs</title>
+  <meta name="description" content="Overview of our sprints, deliverables and approach. NIS2/DORA/AI Act in 6–10 weeks. Evidence by default.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://razorlinelabs.nl/en/one-pager.html">
-<link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/one-pager.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="x-default">
+  <!-- Canonical / hreflang -->
+  <link rel="canonical" href="https://razorlinelabs.nl/en/one-pager.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/one-pager.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/one-pager.html" hreflang="x-default">
 
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Razorline Labs">
-<meta property="og:title" content="One-pager — Sprints, not audits.">
-<meta property="og:description" content="Overview of services, approach, timeline and pricing models.">
-<meta property="og:url" content="https://razorlinelabs.nl/en/one-pager.html">
-<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0a0a0a">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Razorline Labs">
+  <meta property="og:title" content="One-pager — Razorline Labs">
+  <meta property="og:description" content="Sprints, not audits. Controls you can merge. Evidence your auditor can click.">
+  <meta property="og:url" content="https://razorlinelabs.nl/en/one-pager.html">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta property="og:image:alt" content="Razorline Labs — Sprints, not audits.">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://razorlinelabs.nl/#org",
+        "name":"Razorline Labs",
+        "url":"https://razorlinelabs.nl/",
+        "logo":{"@type":"ImageObject","url":"https://razorlinelabs.nl/og-image.png"},
+        "email":"hello@razorlinelabs.nl",
+        "areaServed":["NL","EU"],
+        "sameAs":["https://www.linkedin.com/company/razorline-labs"]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://razorlinelabs.nl/#website",
+        "url":"https://razorlinelabs.nl/",
+        "name":"Razorline Labs",
+        "inLanguage":"en-GB",
+        "publisher":{"@id":"https://razorlinelabs.nl/#org"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://razorlinelabs.nl/en/one-pager.html#webpage",
+        "url":"https://razorlinelabs.nl/en/one-pager.html",
+        "name":"One-pager — Razorline Labs",
+        "isPartOf":{"@id":"https://razorlinelabs.nl/#website"},
+        "inLanguage":"en-GB"
+      }
+    ]
+  }
+  </script>
 
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
 
-<nav class="top">
-  <div class="wrap in">
+<nav class="top nav">
+  <div class="wrap in navin">
     <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
     <div class="lang">
       <a href="/one-pager.html">NL</a>
       <a class="current" href="/en/one-pager.html">EN</a>
-      <a class="btn" href="/contact.html" style="margin-left:10px">15-minute check</a>
+      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">15-minute check</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <h1>Sprints, not audits.</h1>
-    <p class="lead">Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in 6–10 weeks. 15–30% cost-down without rewrites.</p>
+    <h1>One-pager</h1>
+    <p class="lead">Sprints, not audits. Controls you can merge. Evidence your auditor can click.</p>
+    <p><a class="btn btn-primary" href="/contact.html">Book a 15-minute check</a></p>
+    <div class="chips">
+      <span class="chip">Fixed scope &amp; time (4–10 wks)</span>
+      <span class="chip">Evidence by default (exports)</span>
+      <span class="chip">EU-first · no lock-in</span>
+      <span class="chip">Optional: pay-from-savings</span>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section>
-    <h2>Services (fixed scope)</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Datadog → OTel Spend-Down (2 wks)</strong>
-        <ul>
-          <li>Duplicate ingest detection & rate-limit</li>
-          <li>Sampling/filters without signal loss</li>
-          <li>Budget/alerts + dashboard</li>
-          <li><em>Outcome:</em> 15–30% lower observability spend</li>
-        </ul>
-      </div>
-      <div class="card">
-        <strong>LLM Cost & Safety Tune-Up (3–4 wks)</strong>
-        <ul>
-          <li>Eval harness (quality/safety/PII)</li>
-          <li>Prompt cache / routing / batching</li>
-          <li>Human-in-the-loop gates + audit log</li>
-          <li><em>Outcome:</em> AI-Act-ready, lower spend</li>
-        </ul>
-      </div>
-      <div class="card">
-        <strong>AWS EKS + RDS Rightsizing (3–4 wks)</strong>
-        <ul>
-          <li>Requests/limits tuning, autoscaling profiles</li>
-          <li>RDS storage/instance optimisation</li>
-          <li>PRs + dashboards for ops/finops</li>
-          <li><em>Outcome:</em> faster infra, less cost</li>
-        </ul>
-      </div>
-      <div class="card">
-        <strong>NIS2/DORA/AI Act Sprint (6–10 wks)</strong>
-        <ul>
-          <li>MFA, RBAC/least-privilege, immutable backups</li>
-          <li>Vuln/SBOM pipeline + incident/runbooks</li>
-          <li>Exportable evidence: logs, DR tests, approvals</li>
-          <li><em>Outcome:</em> controls live & audit-ready</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Approach</h2>
-    <div class="grid">
-      <div class="card"><strong>1) 72h read-only scan</strong><br>Baseline, quick wins, scope freeze.</div>
-      <div class="card"><strong>2) Sprint plan</strong><br>Testable acceptance criteria per deliverable.</div>
-      <div class="card"><strong>3) Build</strong><br>Weekly PRs & demos. Evidence by default.</div>
-      <div class="card"><strong>4) Handover</strong><br>Runbooks, exports, 90-day improvement plan.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Timeline & pricing</h2>
+  <section class="grid">
     <div class="card">
-      <div class="pill">Datadog→OTel: 2 wks</div>
-      <div class="pill">LLM Tune-Up: 3–4 wks</div>
-      <div class="pill">EKS/RDS: 3–4 wks</div>
-      <div class="pill">NIS2/DORA/AI Act: 6–10 wks</div>
-      <p style="margin-top:12px">
-        <strong>Pricing:</strong> fixed per scope. Optional <em>pay-from-savings</em> for cost-down work (if &lt;10% savings: €0). We’ll share the PDF with price bands during the call.
-      </p>
-      <p><a href="/roi.html">→ Estimate your ROI</a></p>
+      <h3>Core sprints (2025+)</h3>
+      <ul class="tight">
+        <li><strong>NIS2 Readiness Sprint</strong> — MVP controls live + evidenced.</li>
+        <li><strong>DORA in a Box</strong> — incident flows &amp; evidence on autopilot.</li>
+        <li><strong>Sovereign Landing Zone (EU)</strong> — residency + guardrails.</li>
+        <li><strong>AI-Act-ready LLMOps</strong> — evals, HITL gates, audit logs.</li>
+        <li><strong>Software Supply-Chain Assurance</strong> — SBOM, SLSA, signing.</li>
+        <li><strong>Post-Quantum Readiness</strong> — crypto inventory + hybrid TLS.</li>
+      </ul>
     </div>
-  </section>
 
-  <section>
-    <h2>What you get</h2>
-    <div class="grid">
-      <div class="card">📄 <strong>Evidence exports:</strong> logs, DR proofs, SBOMs, model approvals.</div>
-      <div class="card">🔐 <strong>Controls live:</strong> MFA, RBAC, backups, vuln pipeline.</div>
-      <div class="card">🧭 <strong>Runbooks:</strong> incident & reporting flows (NIS2/DORA/AI Act).</div>
-      <div class="card">📉 <strong>Cost-down:</strong> 15–30% less cloud/AI/observability.</div>
-    </div>
-  </section>
-
-  <section>
     <div class="card">
-      <strong>Ready to go?</strong><br>
-      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Book a 15-minute check</a>
+      <h3>Deliverables (per sprint)</h3>
+      <ul class="tight">
+        <li>Repo artefacts (IaC/PoC/PRs) you can merge.</li>
+        <li>“Evidence by default”: exports (logs, DR proofs, SBOM, model approvals).</li>
+        <li>Runbooks + policies your auditor can click.</li>
+        <li>Board update and 90-day plan.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Approach</h3>
+      <ol class="tight">
+        <li>Intake (15–30 min) → quick fit/impact.</li>
+        <li>Kick-off with acceptance criteria.</li>
+        <li>Build in 4–10 weeks with weekly demos.</li>
+        <li>Go-live + handover + evidence export.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>Pricing model</h3>
+      <ul class="tight">
+        <li><strong>Fixed sprint</strong>: fixed scope &amp; fixed time.</li>
+        <li><strong>Optional gainshare</strong>: pay-from-savings instead of a fixed fee.</li>
+        <li><strong>Care retainer</strong>: light monthly cadence to keep controls green.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>Who it’s for</h3>
+      <p>Finserv, SaaS, scale-ups and critical entities aiming for NIS2/DORA/AI Act without rewrites.</p>
+    </div>
+    <div class="card">
+      <h3>Outcomes</h3>
+      <ul class="tight">
+        <li>Fast compliance wins, audit-ready and merge-able.</li>
+        <li>Measurable cloud/AI cost-down.</li>
+        <li>EU-first posture without vendor lock-in.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta band">
+    <div class="wrap">
+      <a class="btn btn-primary" href="/contact.html">Book a 15-minute check</a>
+      <a class="btn btn-outline" href="/roi.html">ROI calculator</a>
     </div>
   </section>
 </main>
 
-<footer class="wrap">© Razorline Labs · <a href="/en/">Home</a></footer>
+<footer class="wrap">© Razorline Labs · <a href="/en/privacy.html">Privacy</a></footer>
+
+<!-- Optional: Cloudflare Web Analytics (replace YOUR_TOKEN) -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"YOUR_TOKEN"}'></script> -->
+
 </body>
 </html>
