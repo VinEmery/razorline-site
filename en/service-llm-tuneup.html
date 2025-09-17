@@ -1,96 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLM Cost & Safety Tune-Up — Razorline Labs</title>
-<meta name="description" content="Lower inference spend with quality intact and AI-Act-ready governance (HITL, audit log, PII filters).">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LLM Cost & Safety Tune-Up — Razorline Labs</title>
+  <meta name="description" content="Lower inference spend + AI-Act-ready gates. Evals, kv-cache/batching, PII redaction, audit logs. Evidence by default.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://razorlinelabs.nl/en/service-llm-tuneup.html">
-<link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/service-llm-tuneup.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="x-default">
+  <link rel="canonical" href="https://razorlinelabs.nl/en/service-llm-tuneup.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/service-llm-tuneup.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/service-llm-tuneup.html" hreflang="x-default">
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="LLM Cost & Safety Tune-Up (3–4 wks)">
-<meta property="og:description" content="Spend down, quality steady, governance up.">
-<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LLM Cost & Safety Tune-Up">
+  <meta property="og:description" content="Lower inference spend + AI-Act-ready gates.">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://razorlinelabs.nl/#org","name":"Razorline Labs","url":"https://razorlinelabs.nl/"},
+    {"@type":"WebSite","@id":"https://razorlinelabs.nl/#website","url":"https://razorlinelabs.nl/","name":"Razorline Labs"}
+  ]}
+  </script>
 
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
-<nav>
-  <div class="wrap in">
+<nav class="top nav">
+  <div class="wrap in navin">
     <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
     <div class="lang">
       <a href="/service-llm-tuneup.html">NL</a>
       <a class="current" href="/en/service-llm-tuneup.html">EN</a>
-      <a class="btn" href="/contact.html" style="margin-left:10px">Book a 15-minute check</a>
+      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">15-minute check</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <h1>LLM Cost & Safety Tune-Up (3–4 wks)</h1>
-    <p class="lead">Lower inference spend with quality intact and AI-Act-ready governance (HITL, audit log, PII filters).</p>
+    <h1>LLM Cost & Safety Tune-Up</h1>
+    <p class="lead">Lower inference spend + AI-Act-ready gates.</p>
+    <p><a class="btn btn-primary" href="/contact.html">Book 15-minute check</a></p>
+    <div class="chips">
+      <span class="chip">Evals (quality/safety/PII)</span>
+      <span class="chip">kv-cache & batching</span>
+      <span class="chip">Human-in-the-loop</span>
+      <span class="chip">Audit logs / approvals</span>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section>
-    <h2>Deliverables</h2>
-    <div class="grid">
-      <div class="card"><strong>Evaluations</strong><ul>
-        <li>Eval harness (quality/safety/PII)</li><li>Baseline vs post-optimisation</li><li>Gate scores per release</li></ul></div>
-      <div class="card"><strong>Cost optimisation</strong><ul>
-        <li>Prompt cache, batching & parallel routing</li><li>Tiered models via router</li><li>Token budgets & timeouts</li></ul></div>
-      <div class="card"><strong>Governance</strong><ul>
-        <li>HITL gates</li><li>PII redaction & policy</li><li>Audit log + export</li></ul></div>
-      <div class="card"><strong>Evidence</strong><ul>
-        <li>Before/after cost report</li><li>Eval report & gate config</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Acceptance criteria</h2>
+  <section class="grid">
     <div class="card">
-      <ul>
-        <li><strong>&ge;15%</strong> lower inference spend on agreed scope</li>
-        <li>No significant drop in quality score vs baseline</li>
-        <li>HITL gates & PII filters active; audit log exportable</li>
+      <h3>Deliverables</h3>
+      <ul class="tight">
+        <li>End-to-end eval harness (quality, PII, jailbreaks).</li>
+        <li>Cache/batching + model/route selection for cost.</li>
+        <li>HITL gates + redaction for PII/policy.</li>
+        <li>Audit trail & approval export (AI Act mapping).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Time & approach</h3>
+      <ul class="tight">
+        <li>Lead time: <strong>3–6 weeks</strong>.</li>
+        <li>Weekly PRs and measurable deltas.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Acceptance</h3>
+      <ul class="tight">
+        <li>Measured €-reduction per 1K tokens/request.</li>
+        <li>AI Act artefacts (risks, logs, approvals).</li>
+        <li>No quality regression beyond agreed threshold.</li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Timeline & pricing</h2>
-    <div class="card">
-      <div class="pill">Duration: 3–4 weeks</div><div class="pill">Fixed price per scope</div>
-      <p style="margin-top:10px">See <a href="/en/roi.html">/en/roi.html</a> and <a href="/en/one-pager.html">one-pager</a>.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>What we need</h2>
-    <div class="grid">
-      <div class="card"><strong>Read-only access</strong><ul><li>LLM provider/router</li><li>Logging/metrics</li></ul></div>
-      <div class="card"><strong>Datasets</strong><ul><li>Representative prompts</li><li>Evaluation rubrics</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="card">
-      <strong>Ready to cut AI spend?</strong><br>
-      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Book a 15-minute check</a>
+  <section class="cta band">
+    <div class="wrap">
+      <a class="btn btn-primary" href="/contact.html">Book 15-minute check</a>
+      <a class="btn btn-outline" href="/en/roi.html">ROI calculator</a>
     </div>
   </section>
 </main>
 
-<footer class="wrap">© Razorline Labs · <a href="/en/">Home</a></footer>
+<footer class="wrap">© Razorline Labs · <a href="/en/privacy.html">Privacy</a></footer>
 </body>
 </html>
