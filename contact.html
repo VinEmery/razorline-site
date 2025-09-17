@@ -1,50 +1,77 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Plan een 15-min check — Razorline Labs</title>
-<meta name="description" content="Plan een korte haalbaarheidscheck. Geen salespitch.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://razorlinelabs.nl/contact.html">
-<link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/contact.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="x-default">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact & afspraak — Razorline Labs</title>
+  <meta name="description" content="Plan direct een 15-min check. We luisteren naar je context en toetsen fit in minuten.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<!-- Calendly -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <link rel="canonical" href="https://razorlinelabs.nl/contact.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/contact.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="x-default">
 
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <!-- OG -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact & afspraak — Razorline Labs">
+  <meta property="og:description" content="Plan direct een 15-min check.">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
 
+  <!-- Schema (optional duplicate on this page) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "@id":"https://razorlinelabs.nl/#org",
+    "name":"Razorline Labs",
+    "url":"https://razorlinelabs.nl/",
+    "email":"hello@razorlinelabs.nl"
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
+
+  <!-- Calendly assets -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
-<header>
+
+<nav class="top nav">
+  <div class="wrap in navin">
+    <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <div class="lang">
+      <a class="current" href="/contact.html">NL</a>
+      <a href="/en/contact.html">EN</a>
+      <a class="btn btn-outline" href="/">Home</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
   <div class="wrap">
-    <a href="/" style="color:#fff;font-weight:900;letter-spacing:.22em;text-decoration:none">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+    <h1>Plan een 15-min check</h1>
+    <p class="lead">Korte intake. We scannen fit en impact in minuten.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <h1>Plan een 15-min check</h1>
-  <p class="note">Geen salespitch — we valideren of een sprint zinvol is en welke acceptance criteria haalbaar zijn.</p>
+  <section class="card" style="padding:0">
+    <!-- Calendly embed with UTM tags -->
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/hello-razorlinelabs/new-meeting?utm_source=site&utm_medium=page&utm_campaign=contact_nl"
+         style="min-width:320px;height:740px"></div>
+  </section>
 
-  <div class="calendly-inline-widget frame"
-       data-url="https://calendly.com/hello-razorlinelabs/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0098ff"></div>
-  <script>
-    // Ensure Calendly picks up container height on SPA-ish page loads
-    window.addEventListener('load', () => {
-      if (window.Calendly && Calendly.initInlineWidget) {
-        Calendly.initInlineWidget({
-          url: 'https://calendly.com/hello-razorlinelabs/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0098ff',
-          parentElement: document.querySelector('.calendly-inline-widget')
-        });
-      }
-    });
-  </script>
-
-  <p class="note">Liever een e-mail? <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a></p>
+  <section>
+    <div class="card">
+      Liever mailen? <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a>
+    </div>
+  </section>
 </main>
+
+<footer class="wrap">© Razorline Labs · <a href="/privacy.html">Privacy</a></footer>
 </body>
 </html>
