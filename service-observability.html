@@ -1,99 +1,98 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Datadog → OTel Spend-Down — Razorline Labs</title>
-<meta name="description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies. Datadog → OTel optimalisaties, budgetten en dashboards.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Datadog → OpenTelemetry Spend-Down — Razorline Labs</title>
+  <meta name="description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies. Sampling, OTel-pipelines, retentie & exports. Evidence by default.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://razorlinelabs.nl/service-observability.html">
-<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/service-observability.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="x-default">
+  <link rel="canonical" href="https://razorlinelabs.nl/service-observability.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/service-observability.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/service-observability.html" hreflang="x-default">
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="Datadog → OTel Spend-Down (2 wkn)">
-<meta property="og:description" content="Observability-kosten 15–30% omlaag zonder signaalverlies. Evidence & dashboards.">
-<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Datadog → OpenTelemetry Spend-Down">
+  <meta property="og:description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies.">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://razorlinelabs.nl/#org",
+     "name":"Razorline Labs","url":"https://razorlinelabs.nl/",
+     "logo":{"@type":"ImageObject","url":"https://razorlinelabs.nl/og-image.png"}},
+    {"@type":"WebSite","@id":"https://razorlinelabs.nl/#website","url":"https://razorlinelabs.nl/","name":"Razorline Labs"}
+  ]}
+  </script>
 
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
-<nav>
-  <div class="wrap in">
+<nav class="top nav">
+  <div class="wrap in navin">
     <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
     <div class="lang">
       <a class="current" href="/service-observability.html">NL</a>
       <a href="/en/service-observability.html">EN</a>
-      <a class="btn" href="/contact.html" style="margin-left:10px">15-min check</a>
+      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">15-min check</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <h1>Datadog → OTel Spend-Down (2 wkn)</h1>
-    <p class="lead">15–30% lagere observability-kosten zonder signaalverlies. Budgetten, alerts en dashboards meegeleverd.</p>
+    <h1>Datadog → OTel Spend-Down</h1>
+    <p class="lead">14 dagen om observability-kosten te verlagen zonder signaalverlies.</p>
+    <p><a class="btn btn-primary" href="/contact.html">Plan 15-min check</a></p>
+    <div class="chips">
+      <span class="chip">Sampling & retentie</span>
+      <span class="chip">OTel collector pipelines</span>
+      <span class="chip">Dashboards & exports</span>
+      <span class="chip">Evidence by default</span>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section>
-    <h2>Deliverables</h2>
-    <div class="grid">
-      <div class="card"><strong>Ingest & sampling</strong><ul>
-        <li>Dubbele ingestops & ruis detecteren en stoppen</li><li>OTel sampling/filters zonder key signal verlies</li><li>Log pipelines & metric cardinality reductie</li></ul></div>
-      <div class="card"><strong>Budgets & alerts</strong><ul>
-        <li>Maandbudgetten + real-time alerts per team</li><li>Runbook “kosten spike”</li><li>Ownership tagging & cost centers</li></ul></div>
-      <div class="card"><strong>Dashboards & SLO’s</strong><ul>
-        <li>Spend-dashboards (team/product)</li><li>SLO-checks behouden signaal/latency</li><li>PR’s met config-wijzigingen</li></ul></div>
-      <div class="card"><strong>Evidence</strong><ul>
-        <li>Voor/na spend-rapport</li><li>Change log & exporteerbare bewijzen</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Acceptatiecriteria (testbaar)</h2>
+  <section class="grid">
     <div class="card">
-      <ul>
-        <li><strong>&ge;15%</strong> daling in ingest/spend op afgesproken scope</li>
-        <li><strong>0</strong> SLO regressies op key signalen (error-ratio, p95 latency)</li>
-        <li>Budget & alerting actief met owners</li>
-        <li>Dashboards + export (CSV/JSON) aanwezig</li>
+      <h3>Deliverables</h3>
+      <ul class="tight">
+        <li>OTel collector blueprints (batching, tail-sampling, attribs).</li>
+        <li>Datadog/OTel sampling- en retentiestrategie.</li>
+        <li>Kosten-dashboards + alarms (per team/service).</li>
+        <li>Evidence-exports (instellingen, diff, grafieken).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tijd & aanpak</h3>
+      <ul class="tight">
+        <li>Doorlooptijd: <strong>2 weken</strong>.</li>
+        <li>Wekelijkse demo, PR’s die je kunt mergen.</li>
+        <li>Geen lock-in, tooling-agnostisch.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Acceptatiecriteria</h3>
+      <ul class="tight">
+        <li>≥ X% kostenreductie zonder kritieke signaal-regressie.</li>
+        <li>Runbooks + revert-plan per team.</li>
+        <li>Board-update + 90-dagen optimalisatieplan.</li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Tijdlijn & prijs</h2>
-    <div class="card">
-      <div class="pill">Duur: 2 weken</div>
-      <div class="pill">Vaste prijs per scope</div>
-      <div class="pill">Optioneel: fee uit besparing</div>
-      <p style="margin-top:10px">Schat je ROI: <a href="/roi.html">/roi.html</a> · Overzicht: <a href="/one-pager.html">one-pager</a></p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Wat we nodig hebben</h2>
-    <div class="grid">
-      <div class="card"><strong>Read-only toegang</strong><ul><li>Datadog/OTel accounts</li><li>Factuur/export van laatste 2 maanden</li></ul></div>
-      <div class="card"><strong>Contactpersonen</strong><ul><li>Owner per product/team</li><li>Slack/Teams kanaal</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="card">
-      <strong>Klaar om kosten te verlagen?</strong><br>
-      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Plan een 15-min check</a>
+  <section class="cta band">
+    <div class="wrap">
+      <a class="btn btn-primary" href="/contact.html">Plan 15-min check</a>
+      <a class="btn btn-outline" href="/roi.html">ROI-calculator</a>
     </div>
   </section>
 </main>
 
-<footer class="wrap">© Razorline Labs · <a href="/">Home</a></footer>
+<footer class="wrap">© Razorline Labs · <a href="/privacy.html">Privacy</a></footer>
 </body>
 </html>
