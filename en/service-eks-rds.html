@@ -1,96 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AWS EKS + RDS Rightsizing — Razorline Labs</title>
-<meta name="description" content="Quick, measurable infra wins with PRs and dashboards: requests/limits, autoscaling, Spot mix and RDS tuning.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AWS EKS + RDS Rightsizing — Razorline Labs</title>
+  <meta name="description" content="Quick, measurable infra wins with PRs and dashboards. Workload rightsizing, Spot/Graviton, RDS plans, autoscaling. Evidence by default.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://razorlinelabs.nl/en/service-eks-rds.html">
-<link rel="alternate" href="https://razorlinelabs.nl/service-eks-rds.html" hreflang="nl">
-<link rel="alternate" href="https://razorlinelabs.nl/en/service-eks-rds.html" hreflang="en">
-<link rel="alternate" href="https://razorlinelabs.nl/service-eks-rds.html" hreflang="x-default">
+  <link rel="canonical" href="https://razorlinelabs.nl/en/service-eks-rds.html">
+  <link rel="alternate" href="https://razorlinelabs.nl/service-eks-rds.html" hreflang="nl">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/service-eks-rds.html" hreflang="en">
+  <link rel="alternate" href="https://razorlinelabs.nl/en/service-eks-rds.html" hreflang="x-default">
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="AWS EKS + RDS Rightsizing (3–4 wks)">
-<meta property="og:description" content="Faster infra & lower cost with testable PRs.">
-<meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AWS EKS + RDS Rightsizing">
+  <meta property="og:description" content="Quick, measurable infra wins with PRs and dashboards.">
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://razorlinelabs.nl/#org","name":"Razorline Labs","url":"https://razorlinelabs.nl/"},
+    {"@type":"WebSite","@id":"https://razorlinelabs.nl/#website","url":"https://razorlinelabs.nl/","name":"Razorline Labs"}
+  ]}
+  </script>
 
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
-<nav>
-  <div class="wrap in">
+<nav class="top nav">
+  <div class="wrap in navin">
     <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
     <div class="lang">
       <a href="/service-eks-rds.html">NL</a>
       <a class="current" href="/en/service-eks-rds.html">EN</a>
-      <a class="btn" href="/contact.html" style="margin-left:10px">Book a 15-minute check</a>
+      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">15-minute check</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <h1>AWS EKS + RDS Rightsizing (3–4 wks)</h1>
-    <p class="lead">Quick, measurable infra wins with PRs and dashboards: requests/limits, autoscaling, Spot mix and RDS tuning.</p>
+    <h1>AWS EKS + RDS Rightsizing</h1>
+    <p class="lead">Quick, measurable infra wins with PRs and dashboards.</p>
+    <p><a class="btn btn-primary" href="/contact.html">Book 15-minute check</a></p>
+    <div class="chips">
+      <span class="chip">Workload rightsizing</span>
+      <span class="chip">Spot / Graviton</span>
+      <span class="chip">RDS plans & storage</span>
+      <span class="chip">Autoscaling policies</span>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section>
-    <h2>Deliverables</h2>
-    <div class="grid">
-      <div class="card"><strong>EKS</strong><ul>
-        <li>Requests/limits tuning + HPA/VPA profiles</li><li>Node group consolidation; Spot with safe fallbacks</li><li>Resource quotas & pod disruption budgets</li></ul></div>
-      <div class="card"><strong>RDS</strong><ul>
-        <li>Instance/storage class & IOPS alignment</li><li>Connection pooling/max_connections</li><li>Query plans, indexing and pgbouncer/Proxy</li></ul></div>
-      <div class="card"><strong>PRs & dashboards</strong><ul>
-        <li>Pull requests for every change</li><li>Performance & cost dashboards</li><li>Rollback plan</li></ul></div>
-      <div class="card"><strong>Evidence</strong><ul>
-        <li>Before/after performance & cost</li><li>Export with changes and results</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Acceptance criteria</h2>
+  <section class="grid">
     <div class="card">
-      <ul>
-        <li><strong>+X%</strong> throughput or <strong>−Y%</strong> p95 latency under test load (targets in plan)</li>
-        <li><strong>10–25%</strong> infra cost reduction on scope or justified N/A</li>
-        <li>All changes via PR; dashboards available</li>
+      <h3>Deliverables</h3>
+      <ul class="tight">
+        <li>EKS workload profiles + HPA/VPA policies.</li>
+        <li>Spot/Graviton where appropriate + fallback.</li>
+        <li>RDS instance/plan advice, storage & snapshots.</li>
+        <li>Dashboards + FinOps alerts (by team/service).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Time & approach</h3>
+      <ul class="tight">
+        <li>Lead time: <strong>2–4 weeks</strong>.</li>
+        <li>Weekly demo, merge-ready PRs.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Acceptance</h3>
+      <ul class="tight">
+        <li>Measured €-reduction with no SLO regression.</li>
+        <li>Rollback plan + runbooks per team.</li>
+        <li>Board update + 90-day plan.</li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Timeline & pricing</h2>
-    <div class="card">
-      <div class="pill">Duration: 3–4 weeks</div><div class="pill">Fixed price per scope</div><div class="pill">Optional: pay-from-savings</div>
-      <p style="margin-top:10px">Estimate ROI: <a href="/en/roi.html">/en/roi.html</a></p>
-    </div>
-  </section>
-
-  <section>
-    <h2>What we need</h2>
-    <div class="grid">
-      <div class="card"><strong>Read-only AWS</strong><ul><li>CloudWatch/Cost Explorer</li><li>EKS/RDS description</li></ul></div>
-      <div class="card"><strong>Load & releases</strong><ul><li>Representative load or replay</li><li>Change window</li></ul></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="card">
-      <strong>Ready for infra wins?</strong><br>
-      <a class="btn" href="/contact.html" style="margin-top:8px;display:inline-block">Book a 15-minute check</a>
+  <section class="cta band">
+    <div class="wrap">
+      <a class="btn btn-primary" href="/contact.html">Book 15-minute check</a>
+      <a class="btn btn-outline" href="/en/roi.html">ROI calculator</a>
     </div>
   </section>
 </main>
 
-<footer class="wrap">© Razorline Labs · <a href="/en/">Home</a></footer>
+<footer class="wrap">© Razorline Labs · <a href="/en/privacy.html">Privacy</a></footer>
 </body>
 </html>
