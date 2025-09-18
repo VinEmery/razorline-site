@@ -1,85 +1,94 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sprints, not audits. — Razorline Labs</title>
-  <meta name="description" content="Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in 6–10 weeks. 15–30% cost-down without rewrites.">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Razorline Labs — Sprints, not audits (NIS2/DORA/AI Act)</title>
+  <meta name="description" content="Sprints, not audits. NIS2/DORA/AI Act live in 6–10 weeks. Evidence by default. 15–30% cost-down for OTel/LLM/EKS+RDS — without rewrites." />
 
-  <!-- Canonical / hreflang -->
-  <link rel="canonical" href="https://razorlinelabs.nl/en/">
-  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="nl">
-  <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en">
-  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default">
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://razorlinelabs.nl/en/" />
+  <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en" />
+  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="nl" />
+  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Razorline Labs">
-  <meta property="og:title" content="Sprints, not audits.">
-  <meta property="og:description" content="NIS2/DORA/AI Act live in 6–10 weeks. 15–30% cost-down without rewrites.">
-  <meta property="og:url" content="https://razorlinelabs.nl/en/">
-  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-  <meta property="og:image:alt" content="Razorline Labs — Sprints, not audits.">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sprints, not audits.">
-  <meta name="twitter:description" content="Controls you can merge. Evidence your auditor can click.">
-  <meta name="twitter:image" content="https://razorlinelabs.nl/og-image.png">
+  <!-- OG / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Razorline Labs" />
+  <meta property="og:title" content="Razorline Labs — Sprints, not audits" />
+  <meta property="og:description" content="NIS2/DORA/AI Act live in 6–10 weeks. Evidence by default. 15–30% cost-down without regressions." />
+  <meta property="og:url" content="https://razorlinelabs.nl/en/" />
+  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://razorlinelabs.nl/#org",
-        "name":"Razorline Labs",
-        "url":"https://razorlinelabs.nl/",
-        "logo":{"@type":"ImageObject","url":"https://razorlinelabs.nl/og-image.png"},
-        "email":"hello@razorlinelabs.nl",
-        "areaServed":["NL","EU"],
-        "sameAs":["https://www.linkedin.com/company/razorline-labs"]
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://razorlinelabs.nl/#website",
-        "url":"https://razorlinelabs.nl/",
-        "name":"Razorline Labs",
-        "inLanguage":"en-GB",
-        "publisher":{"@id":"https://razorlinelabs.nl/#org"}
-      }
-    ]
-  }
-  </script>
+  <link rel="icon" href="/favicon.ico" />
 
-  <!-- Shared CSS & JS -->
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/site.js" defer></script>
+  <style>
+    :root{
+      --bg:#0a0c0e;--card:#121418;--muted:#adb3ba;--text:#eef2f7;--blue:#2290ff;--chip:#1d2026;--ok:#52d67b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:var(--blue);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(10,12,14,.9),rgba(10,12,14,.75));backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid #1b1e24}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:56px}
+    .brand{letter-spacing:.35em;font-weight:700}
+    .lang a{display:inline-block;padding:6px 10px;border-radius:10px;background:#1b1e24;color:#cfd6dd;margin-left:6px}
+    .lang a.active{background:#233142;color:#fff;border:1px solid #2a3c52}
+    .btn{display:inline-block;padding:14px 18px;border-radius:12px;background:var(--blue);color:#02101b;font-weight:700}
+    .btn:hover{filter:brightness(1.1)}
+    .hero{position:relative;overflow:hidden;padding:56px 0 28px;border-bottom:1px solid #1b1e24}
+    .slash{position:absolute;inset:0;background:linear-gradient(180deg,#0a0c0e 0%,#0a0c0e 35%,rgba(34,144,255,.08) 36%,rgba(34,144,255,.08) 64%,#0a0c0e 65%,#0a0c0e 100%);pointer-events:none}
+    h1{font-size:46px;line-height:1.1;margin:10px 0 8px}
+    .sub{color:var(--muted);max-width:900px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px}
+    .chip{background:var(--chip);border:1px solid #232631;padding:10px 12px;border-radius:999px;color:#d8dee6;font-weight:600;font-size:14px}
+    .grid{display:grid;gap:14px}
+    .cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:980px){.cols-4,.cols-3{grid-template-columns:1fr 1fr} h1{font-size:36px}}
+    @media (max-width:640px){.cols-4,.cols-3{grid-template-columns:1fr} .nav{gap:12px}}
+    .card{background:var(--card);border:1px solid #1b1e24;border-radius:16px;padding:18px}
+    .card:hover{border-color:#29303a}
+    .kpis{margin:28px 0}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi strong{font-size:22px}
+    .logos{display:flex;gap:18px;flex-wrap:wrap;opacity:.7}
+    .logo{width:120px;height:36px;border:1px dashed #2b2f37;border-radius:8px}
+    h2{margin:34px 0 12px;font-size:22px}
+    .steps .step{display:flex;gap:14px}
+    .badge{width:28px;height:28px;border-radius:8px;background:#1b2733;border:1px solid #203040;display:flex;align-items:center;justify-content:center;font-weight:700;color:#9aceff}
+    .quote{font-style:italic;color:#cdd5de}
+    details{background:var(--card);border:1px solid #1b1e24;border-radius:12px;padding:14px}
+    summary{cursor:pointer;font-weight:700}
+    footer{color:#97a0aa;border-top:1px solid #1b1e24;margin-top:40px}
+    .cta-bar{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(10,12,14,.85),rgba(10,12,14,.95));backdrop-filter:blur(6px);border-top:1px solid #1b1e24}
+    .cta-bar .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 20px}
+    .muted{color:var(--muted)}
+  </style>
 </head>
 <body>
 
-<nav class="top nav">
-  <div class="wrap in navin">
-    <a class="brand" href="/en/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
+<header>
+  <div class="wrap nav">
+    <div class="brand">RAZORLINE LABS</div>
     <div class="lang">
       <a href="/">NL</a>
-      <a class="current" href="/en/">EN</a>
-      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">Book 15-minute check</a>
+      <a class="active" aria-current="page">EN</a>
+      <a class="btn" href="https://calendly.com/hello-razorlinelabs/new-meeting?utm_source=site&utm_medium=button&utm_campaign=top-cta">Book 15-minute check</a>
     </div>
   </div>
-</nav>
+</header>
 
-<header class="hero">
+<section class="hero">
+  <div class="slash"></div>
   <div class="wrap">
     <h1>Sprints, not audits.</h1>
-    <p class="lead">
-      Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in 6–10 weeks.
-      15–30% cost-down without rewrites.
+    <p class="sub">Controls you can merge. Evidence your auditor can click. NIS2/DORA/AI Act live in <strong>6–10 weeks</strong>. <strong>15–30% cost-down</strong> without rewrites.</p>
+    <p style="margin:16px 0 10px;">
+      <a class="btn" href="https://calendly.com/hello-razorlinelabs/new-meeting?utm_source=site&utm_medium=button&utm_campaign=hero">Book a 15-minute check</a>
     </p>
-    <p><a class="btn btn-primary" href="/contact.html">Book a 15-minute check</a></p>
-
     <div class="chips">
       <span class="chip">Fixed scope &amp; time (4–10 wks)</span>
       <span class="chip">Evidence by default (exports)</span>
@@ -87,40 +96,111 @@
       <span class="chip">Optional: pay-from-savings</span>
     </div>
   </div>
-</header>
+</section>
 
 <main class="wrap">
-  <section>
-    <h2>What we do</h2>
-    <div class="grid">
-      <div class="card">
-        <a href="/service-observability.html"><strong>Datadog → OTel Spend-Down</strong></a>
-        <p>14 days to cut observability spend without losing signal.</p>
-      </div>
-      <div class="card">
-        <a href="/service-llm-tuneup.html"><strong>LLM Cost &amp; Safety Tune-Up</strong></a>
-        <p>Lower inference spend + AI-Act-ready gates.</p>
-      </div>
-      <div class="card">
-        <a href="/service-eks-rds.html"><strong>AWS EKS + RDS Rightsizing</strong></a>
-        <p>Quick infra wins with PRs and dashboards.</p>
-      </div>
-      <div class="card">
-        <a href="/en/one-pager.html"><strong>One-pager</strong></a>
-        <p>Overview, pricing and evidence.</p>
-      </div>
-      <div class="card">
-        <a href="/roi.html"><strong>ROI Calculator</strong></a>
-        <p>Estimate savings and fee in minutes.</p>
-      </div>
-    </div>
+
+  <!-- KPIs -->
+  <section class="kpis grid cols-3">
+    <div class="card kpi"><span class="badge">1</span><div><strong>Live in 6–10 weeks</strong><br><span class="muted">NIS2/DORA/AI Act sprints</span></div></div>
+    <div class="card kpi"><span class="badge">2</span><div><strong>15–30% cost-down</strong><br><span class="muted">OTel/LLM/EKS+RDS spend</span></div></div>
+    <div class="card kpi"><span class="badge">3</span><div><strong>Evidence by default</strong><br><span class="muted">Auditor-ready exports</span></div></div>
   </section>
+
+  <!-- What we do -->
+  <h2>What we do</h2>
+  <section class="grid cols-4">
+    <a class="card" href="/service-observability.html">
+      <h3>Datadog → OTel Spend-Down</h3>
+      <p class="muted">14 days to cut observability spend without losing signal.</p>
+    </a>
+    <a class="card" href="/service-llm-tuneup.html">
+      <h3>LLM Cost &amp; Safety Tune-Up</h3>
+      <p class="muted">Lower inference spend + AI-Act-ready gates and logs.</p>
+    </a>
+    <a class="card" href="/service-eks.html">
+      <h3>AWS EKS + RDS Rightsizing</h3>
+      <p class="muted">Quick infra wins with PRs and dashboards.</p>
+    </a>
+    <a class="card" href="/one-pager.html">
+      <h3>One-pager</h3>
+      <p class="muted">Overview, pricing and evidence.</p>
+    </a>
+  </section>
+
+  <!-- How it works -->
+  <h2>How it works</h2>
+  <section class="grid cols-3 steps">
+    <div class="card step"><div class="badge">1</div><div><strong>Read-only check (72h)</strong><br><span class="muted">Quick scan, risks &amp; savings with an action plan.</span></div></div>
+    <div class="card step"><div class="badge">2</div><div><strong>Sprint (4–10 wks)</strong><br><span class="muted">Repo artefacts, PRs, runbooks and exports — <em>evidence by default</em>.</span></div></div>
+    <div class="card step"><div class="badge">3</div><div><strong>Acceptance &amp; handover</strong><br><span class="muted">Auditor-ready files, demo, and optional monthly care.</span></div></div>
+  </section>
+
+  <!-- Testimonials -->
+  <h2>What teams say</h2>
+  <section class="grid cols-3">
+    <div class="card"><p class="quote">“Live with NIS2 evidence the auditor could verify in minutes.”</p><p class="muted">— CISO, fintech</p></div>
+    <div class="card"><p class="quote">“15% lower Datadog costs, zero SLO impact. Clear PRs & dashboards.”</p><p class="muted">— Head of Platform</p></div>
+    <div class="card"><p class="quote">“LLM costs down, safety up. Evals + HITL gates were exactly it.”</p><p class="muted">— AI product lead</p></div>
+  </section>
+
+  <!-- Logos -->
+  <h2>Trusted by teams in</h2>
+  <div class="logos" aria-label="Logo strip placeholders">
+    <div class="logo" role="img" aria-label="Fintech"></div>
+    <div class="logo" role="img" aria-label="SaaS"></div>
+    <div class="logo" role="img" aria-label="Industry"></div>
+    <div class="logo" role="img" aria-label="Healthcare"></div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>FAQ</h2>
+  <div class="grid">
+    <details class="card"><summary>Does “pay-from-savings” always apply?</summary><p class="muted">Often for OTel and LLM tune-ups. For NIS2/DORA/AI Act we use fixed scope/time with clear acceptance.</p></details>
+    <details class="card"><summary>How do I show evidence to the auditor?</summary><p class="muted">We ship exportable evidence: runbooks, logs, SBOM/scan results, DR drills, model evals and approval logs.</p></details>
+    <details class="card"><summary>Which stacks do you support?</summary><p class="muted">Datadog, OTel, Splunk; AWS EKS/RDS; multiple LLM providers (routing/caching/HITL). Ask about yours.</p></details>
+  </div>
+
 </main>
 
-<footer class="wrap">
-  © Razorline Labs · <a href="/en/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a>
+<!-- Bottom sticky CTA -->
+<div class="cta-bar">
+  <div class="wrap">
+    <span class="muted">Ready for a fast, concrete check?</span>
+    <a class="btn" href="https://calendly.com/hello-razorlinelabs/new-meeting?utm_source=site&utm_medium=button&utm_campaign=bottom-cta">Book 15 min</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap" style="padding:16px 20px;">
+    © Razorline Labs — <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a>
+  </div>
 </footer>
 
-<a class="m-cta" href="/contact.html">Book a 15-minute check</a>
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Razorline Labs",
+  "url":"https://razorlinelabs.nl/en/",
+  "logo":"https://razorlinelabs.nl/og-image.png",
+  "sameAs":[
+    "https://www.linkedin.com/company/razorline-labs"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Does pay-from-savings always apply?","acceptedAnswer":{"@type":"Answer","text":"Often for OTel and LLM tune-ups. For NIS2/DORA/AI Act we use fixed scope/time with clear acceptance."}},
+    {"@type":"Question","name":"How do I show evidence to the auditor?","acceptedAnswer":{"@type":"Answer","text":"We ship exportable evidence: runbooks, logs, SBOM/scan results, DR drills, model evals and approval logs."}},
+    {"@type":"Question","name":"Which stacks do you support?","acceptedAnswer":{"@type":"Answer","text":"Datadog, OTel, Splunk; AWS EKS/RDS; multiple LLM providers (routing/caching/HITL)."}}
+  ]
+}
+</script>
+
 </body>
 </html>
