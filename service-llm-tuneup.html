@@ -1,95 +1,113 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LLM-kosten & Safety Tune-Up — Razorline Labs</title>
-  <meta name="description" content="Lagere inference-kosten + AI-Act-ready gates. Evals, kv-cache/batching, PII-redactie, audit-logs. Evidence by default.">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLM-kosten & Safety Tune-Up | Razorline Labs</title>
+  <meta name="description" content="Lagere inference-kosten + AI-Act-klare gates en logs. Evals, HITL-approvals en audit-trail — evidence by default." />
 
-  <link rel="canonical" href="https://razorlinelabs.nl/service-llm-tuneup.html">
-  <link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="nl">
-  <link rel="alternate" href="https://razorlinelabs.nl/en/service-llm-tuneup.html" hreflang="en">
-  <link rel="alternate" href="https://razorlinelabs.nl/service-llm-tuneup.html" hreflang="x-default">
+  <link rel="canonical" href="https://razorlinelabs.nl/service-llm-tuneup.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
 
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="LLM-kosten & Safety Tune-Up">
-  <meta property="og:description" content="Lagere inference-kosten + AI-Act-ready gates.">
-  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LLM-kosten & Safety Tune-Up" />
+  <meta property="og:description" content="Lagere inference-kosten + AI-Act-klare gates en logs. Evals, HITL-approvals en audit-trail." />
+  <meta property="og:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
+  <meta property="og:url" content="https://razorlinelabs.nl/service-llm-tuneup.html" />
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"Organization","@id":"https://razorlinelabs.nl/#org","name":"Razorline Labs","url":"https://razorlinelabs.nl/"},
-    {"@type":"WebSite","@id":"https://razorlinelabs.nl/#website","url":"https://razorlinelabs.nl/","name":"Razorline Labs"}
-  ]}
-  </script>
-
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/site.js" defer></script>
+  <!-- Analytics -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-<nav class="top nav">
-  <div class="wrap in navin">
-    <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
-    <div class="lang">
-      <a class="current" href="/service-llm-tuneup.html">NL</a>
-      <a href="/en/service-llm-tuneup.html">EN</a>
-      <a class="btn btn-primary" href="/contact.html" style="margin-left:10px">15-min check</a>
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+      <nav class="nav-actions">
+        <a class="lang-pill is-active" href="/">NL</a>
+        <a class="lang-pill" href="/en/">EN</a>
+        <a class="btn btn-primary" href="/contact.html#book">15-min check</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>LLM-kosten & Safety Tune-Up</h1>
-    <p class="lead">Lagere inference-kosten + AI-Act-ready gates.</p>
-    <p><a class="btn btn-primary" href="/contact.html">Plan 15-min check</a></p>
-    <div class="chips">
-      <span class="chip">Evals (kwaliteit/safety/PII)</span>
-      <span class="chip">kv-cache & batching</span>
-      <span class="chip">Human-in-the-loop</span>
-      <span class="chip">Audit-logs / approvals</span>
+  <!-- Page hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Service</span>
+      <h1>LLM-kosten &amp; Safety Tune-Up</h1>
+      <p>Lagere inference-kosten + <strong>AI-Act-klare</strong> gates en logs. Evals, HITL-approvals en audit-trail.</p>
+      <div style="margin-top: var(--s3)">
+        <a class="btn btn-primary" href="/contact.html#book">Plan 15 min</a>
+        <a class="btn btn-ghost" href="/assets/razorline-one-pager.pdf" download>Bekijk one-pager</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="wrap">
-  <section class="grid">
-    <div class="card">
-      <h3>Deliverables</h3>
-      <ul class="tight">
-        <li>E2E eval-harnas (kwaliteit, PII, jailbreaks).</li>
-        <li>Cache/batching + model/route-keuze voor kosten.</li>
-        <li>HITL-gates + redacties voor PII/policy.</li>
-        <li>Audit-trail & approval-export (AI-Act mapping).</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Tijd & aanpak</h3>
-      <ul class="tight">
-        <li>Doorlooptijd: <strong>3–6 weken</strong>.</li>
-        <li>Wekelijks PR’s en meetbare delta’s.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Acceptatiecriteria</h3>
-      <ul class="tight">
-        <li>Meetbare €-reductie per 1K tokens/verzoek.</li>
-        <li>AI-Act artefacts (risico’s, logboeken, approvals).</li>
-        <li>Geen kwaliteitsregressie boven agreed threshold.</li>
-      </ul>
-    </div>
-  </section>
+  <main>
+    <section class="section">
+      <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(280px,1fr));">
+        <div class="card" style="padding: var(--s4)">
+          <h2 style="margin-top:0">Deliverables</h2>
+          <ul>
+            <li>E2E eval-harnas (kwaliteit, safety, PII, jailbreaks).</li>
+            <li>Cache/batching + model/route-keuze voor kosten.</li>
+            <li>HITL-gates + redacties voor PII/policy.</li>
+            <li>Audit-trail &amp; approval-export (AI-Act mapping).</li>
+          </ul>
+        </div>
 
-  <section class="cta band">
-    <div class="wrap">
-      <a class="btn btn-primary" href="/contact.html">Plan 15-min check</a>
-      <a class="btn btn-outline" href="/roi.html">ROI-calculator</a>
-    </div>
-  </section>
-</main>
+        <div class="card" style="padding: var(--s4)">
+          <h2 style="margin-top:0">Tijd & aanpak</h2>
+          <ul>
+            <li>Doorlooptijd: <strong>3–6 weken</strong>.</li>
+            <li>Wekelijks PR’s en meetbare delta’s.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<footer class="wrap">© Razorline Labs · <a href="/privacy.html">Privacy</a></footer>
+    <section class="section section--band">
+      <div class="container grid grid-steps">
+        <div class="card card-step">
+          <div class="step-dot">1</div>
+          <h3>Read-only check</h3>
+          <p>Stack, datastromen en risico’s in kaart (72u).</p>
+        </div>
+        <div class="card card-step">
+          <div class="step-dot">2</div>
+          <h3>Sprint</h3>
+          <p>Gates, evals, logging en routing PR’s + runbooks.</p>
+        </div>
+        <div class="card card-step">
+          <div class="step-dot">3</div>
+          <h3>Acceptatie &amp; overdracht</h3>
+          <p>Demo, exports en plan voor beheersing.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+        <p class="muted">EU-first engineering studio. Sprints, geen audits.</p>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/contact.html#book">Contact</a></li>
+          <li><a href="/assets/razorline-one-pager.pdf" download>One-pager (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
+  </footer>
+
+  <script src="/site.js" defer></script>
 </body>
 </html>
