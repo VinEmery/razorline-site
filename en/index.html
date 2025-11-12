@@ -24,8 +24,25 @@
   <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en" />
   <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default" />
 
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <!-- Favicon + CSS -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Analytics (Plausible) -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Razorline Labs",
+    "url":"https://razorlinelabs.nl",
+    "email":"hello@razorlinelabs.nl",
+    "description":"DevOps & Platform Engineering consultancy in the Netherlands. Compliance-aware (NIS2/DORA/AI Act), FinOps, Kubernetes, Terraform, CI/CD.",
+    "logo":"https://razorlinelabs.nl/favicon.svg"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -35,7 +52,7 @@
       <nav class="nav-actions">
         <a class="lang-pill" href="/">NL</a>
         <a class="lang-pill is-active" href="/en/" aria-current="page">EN</a>
-        <a class="btn btn-primary" href="/contact.html">Book 15-minute check</a>
+        <a class="btn btn-primary" href="/contact.html#book" data-track="book-15-top">Book 15-minute check</a>
       </nav>
     </div>
   </header>
@@ -49,7 +66,8 @@
       </p>
 
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="/contact.html">Book a 15-minute check</a>
+        <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-hero" aria-label="Book a 15-minute check">Book a 15-minute check</a>
+        <a class="btn btn-ghost btn-lg" href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-hero" aria-label="Download the one-pager PDF">Download one-pager</a>
       </div>
 
       <ul class="hero-badges">
@@ -78,7 +96,7 @@
           <p>14 days to cut observability spend without losing signal.</p>
         </a>
 
-        <a class="card card-service" href="/service-llm-tune-up.html">
+        <a class="card card-service" href="/service-llm-tuneup.html">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7a3 3 0 1 1 3-3v16a3 3 0 1 1-3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3"/></svg>
           </div>
@@ -94,7 +112,7 @@
           <p>Quick infra wins with PRs and dashboards.</p>
         </a>
 
-        <a class="card card-service" href="/onepager.html">
+        <a class="card card-service" href="/one-pager.html">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v6h6"/></svg>
           </div>
@@ -211,7 +229,7 @@
   </section>
 
   <div class="sticky-cta">
-    <a class="btn btn-primary btn-lg" href="/contact.html">Book 15 min</a>
+    <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-sticky">Book 15 min</a>
   </div>
 
   <footer class="site-footer">
@@ -223,11 +241,15 @@
       <div class="footer-col">
         <ul class="footer-links">
           <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html#book" data-track="book-15-footer">Contact</a></li>
+          <li><a href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-footer">One-pager (PDF)</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
   </footer>
+
+  <!-- Minimal click tracking -->
+  <script src="/site.js" defer></script>
 </body>
 </html>
