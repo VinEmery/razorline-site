@@ -5,20 +5,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact & afspraak — Razorline Labs</title>
   <meta name="description" content="Plan direct een 15-min check. We luisteren naar je context en toetsen fit in minuten.">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://razorlinelabs.nl/contact.html">
   <link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="nl">
   <link rel="alternate" href="https://razorlinelabs.nl/en/contact.html" hreflang="en">
   <link rel="alternate" href="https://razorlinelabs.nl/contact.html" hreflang="x-default">
 
-  <!-- OG -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://razorlinelabs.nl/contact.html">
   <meta property="og:title" content="Contact & afspraak — Razorline Labs">
   <meta property="og:description" content="Plan direct een 15-min check.">
-  <meta property="og:image" content="https://razorlinelabs.nl/og-image.png">
+  <meta property="og:image" content="https://razorlinelabs.nl/assets/og-image-blue.png">
 
-  <!-- Schema (optional duplicate on this page) -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact & afspraak — Razorline Labs">
+  <meta name="twitter:description" content="Plan direct een 15-min check.">
+  <meta name="twitter:image" content="https://razorlinelabs.nl/assets/og-image-blue.png">
+
+  <!-- Analytics -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -43,7 +53,7 @@
   <div class="wrap in navin">
     <a class="brand" href="/">RAZORLINE <span style="color:#cfcfcf;letter-spacing:.35em">LABS</span></a>
     <div class="lang">
-      <a class="current" href="/contact.html">NL</a>
+      <a class="current" href="/contact.html" aria-current="page">NL</a>
       <a href="/en/contact.html">EN</a>
       <a class="btn btn-outline" href="/">Home</a>
     </div>
@@ -59,10 +69,18 @@
 
 <main class="wrap">
   <section class="card" style="padding:0">
-    <!-- Calendly embed with UTM tags -->
-    <div class="calendly-inline-widget"
+    <!-- anchor so /contact.html#book jumps right here -->
+    <div id="book" class="calendly-inline-widget"
          data-url="https://calendly.com/hello-razorlinelabs/new-meeting?utm_source=site&utm_medium=page&utm_campaign=contact_nl"
-         style="min-width:320px;height:740px"></div>
+         style="min-width:320px;height:740px"
+         aria-label="Boek een 15-min kennismaking">
+    </div>
+    <noscript>
+      <div class="card" style="margin:0;padding:1rem">
+        JavaScript is uitgeschakeld. Mail ons op
+        <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> om te plannen.
+      </div>
+    </noscript>
   </section>
 
   <section>
