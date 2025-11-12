@@ -3,78 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datadog → OTel Spend-Down | Razorline Labs</title>
-  <meta name="description" content="Verlaag observability-kosten 15–30% in 14 dagen zonder signaalverlies. Datadog → OpenTelemetry ‘spend-down’ sprint met mergebare artefacts." />
+  <title>Datadog → OpenTelemetry Spend-Down | Razorline Labs</title>
+  <meta name="description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies. PR's, dashboards en runbooks — evidence by default." />
+
   <link rel="canonical" href="https://razorlinelabs.nl/service-otel-spend-down.html" />
-  <link rel="alternate" hreflang="en" href="https://razorlinelabs.nl/en/service-otel-spend-down.html" />
-  <link rel="alternate" hreflang="nl" href="https://razorlinelabs.nl/service-otel-spend-down.html" />
-  <link rel="alternate" hreflang="x-default" href="https://razorlinelabs.nl/en/service-otel-spend-down.html" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Datadog → OpenTelemetry Spend-Down" />
+  <meta property="og:description" content="14 dagen om observability-kosten te verlagen zonder signaalverlies. PR's, dashboards en runbooks." />
+  <meta property="og:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
+  <meta property="og:url" content="https://razorlinelabs.nl/service-otel-spend-down.html" />
+
+  <!-- Analytics -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
+  <!-- Site header -->
   <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="/"><span>RAZORLINE</span> LABS</a>
-      <nav class="header-actions">
-        <a class="lang-switch" href="/?lang=nl">NL</a>
-        <a class="lang-switch inactive" href="/en/service-otel-spend-down.html">EN</a>
-        <a class="btn btn-primary" href="/contact.html">15-min check</a>
+    <div class="container nav">
+      <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+      <nav class="nav-actions">
+        <a class="lang-pill is-active" href="/">NL</a>
+        <a class="lang-pill" href="/en/">EN</a>
+        <a class="btn btn-primary" href="/contact.html#book">15-min check</a>
       </nav>
     </div>
   </header>
 
+  <!-- Page hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Service</span>
+      <h1>Datadog → OpenTelemetry Spend-Down</h1>
+      <p>14 dagen om observability-kosten te verlagen <strong>zonder signaalverlies</strong>. Repo-artefacts &amp; PR’s die je zo kunt mergen.</p>
+      <div style="margin-top: var(--s3)">
+        <a class="btn btn-primary" href="/contact.html#book">Plan 15 min</a>
+        <a class="btn btn-ghost" href="/assets/razorline-one-pager.pdf" download>Bekijk one-pager</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <section class="page-hero subtle-splash">
-      <div class="container">
-        <nav class="breadcrumbs"><a href="/">Home</a> / <span>Datadog → OTel Spend-Down</span></nav>
-        <h1>Datadog → OpenTelemetry Spend-Down</h1>
-        <p class="lead">14 dagen om observability-kosten te verlagen <strong>zonder signaalverlies</strong>. Repo-artefacts + PR’s die je zo kunt mergen.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/contact.html">Plan een check van 15 min</a>
-          <a class="btn btn-ghost" href="/onepager.html">Bekijk one-pager</a>
+    <section class="section">
+      <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(280px,1fr));">
+        <div class="card" style="padding: var(--s4)">
+          <h2 style="margin-top:0">Wat je krijgt</h2>
+          <ul>
+            <li>Baseline van huidig Datadog-verbruik &amp; SLO-impact.</li>
+            <li>OTel-pipeline &amp; sampling-profiel met behoud van signaal.</li>
+            <li>PR’s voor agents, exporters en dashboards.</li>
+            <li>Runbook + kostenrapportage (<em>evidence by default</em>).</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding: var(--s4)">
+          <h2 style="margin-top:0">Resultaat in 14 dagen</h2>
+          <ul>
+            <li><strong>15–30% lagere kosten</strong> op logs/metrics/traces.</li>
+            <li><strong>Geen lock-in</strong>: OTel eerst, Datadog blijft bruikbaar.</li>
+            <li>Auditor-klare exports en beslisdocumenten.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="container grid-2 gap-xl section-pad">
-      <div class="card">
-        <h2>Wat je krijgt</h2>
-        <ul class="checklist">
-          <li>Baseline van huidige Datadog-verbruik & SLO-impact.</li>
-          <li>OTel-pipeline & sampling-profiel met behoud van signaal.</li>
-          <li>PR’s voor agents, exporters en dashboards.</li>
-          <li>Runbook + kostenrapportage (evidence by default).</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Resultaat in 14 dagen</h2>
-        <ul class="bullets">
-          <li><strong>15–30% lagere kosten</strong> op logs/metriek/traces.</li>
-          <li><strong>Geen lock-in</strong>: OTel-eerst, Datadog blijft bruikbaar.</li>
-          <li>Auditor-klare exports en beslisdocumenten.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="container section-pad">
-      <h2 class="eyebrow">Werkwijze</h2>
-      <div class="steps grid-3">
-        <div class="step card"><span class="step-badge">1</span><h3>Read-only check (72u)</h3><p>Snelle scan van verbruik, risico’s en quick wins.</p></div>
-        <div class="step card"><span class="step-badge">2</span><h3>Sprint (2 weken)</h3><p>OTel-pipeline, PR’s, dashboards en runbooks.</p></div>
-        <div class="step card"><span class="step-badge">3</span><h3>Acceptatie & overdracht</h3><p>Demo, exports en plan voor doorgroei.</p></div>
+    <section class="section section--band">
+      <div class="container grid grid-steps">
+        <div class="card card-step">
+          <div class="step-dot">1</div>
+          <h3>Read-only check (72u)</h3>
+          <p>Snelle scan van verbruik, risico’s &amp; quick wins.</p>
+        </div>
+        <div class="card card-step">
+          <div class="step-dot">2</div>
+          <h3>Sprint (2 weken)</h3>
+          <p>OTel-pipeline, PR’s, dashboards en runbooks.</p>
+        </div>
+        <div class="card card-step">
+          <div class="step-dot">3</div>
+          <h3>Acceptatie &amp; overdracht</h3>
+          <p>Demo, exports en plan voor doorgroei.</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-row">
-      <small>© Razorline Labs</small>
-      <nav class="footer-nav">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+        <p class="muted">EU-first engineering studio. Sprints, geen audits.</p>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/contact.html#book">Contact</a></li>
+          <li><a href="/assets/razorline-one-pager.pdf" download>One-pager (PDF)</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
   </footer>
+
+  <script src="/site.js" defer></script>
 </body>
 </html>
