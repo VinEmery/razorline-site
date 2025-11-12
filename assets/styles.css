@@ -215,6 +215,40 @@ nav.top.nav .wrap.in.navin{
   .section{ padding: var(--s6) 0; }
 }
 
+/* === Razorline polish: cards, grid, header (overrides) === */
+
+/* 1) Keep content a bit narrower for balance on desktop */
+.container{ max-width: 1080px; }
+
+/* 2) Services grid: never squeeze to 4 skinny columns */
+.grid-services{ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/* 3) Card layout: stack icon above text for full-width copy */
+.card-service{
+  grid-template-columns: 1fr;           /* was: 56px 1fr */
+  align-items: start;
+  gap: var(--s2);
+}
+.card-service .card-icon{
+  width: 48px; height: 48px;            /* a bit smaller for balance */
+  margin-bottom: .25rem;
+}
+.card-service h3{ font-size: 1.1rem; }
+.card-service p{
+  margin-top: .25rem;
+  color: var(--muted);
+  max-width: 52ch;                       /* comfortable line length */
+}
+
+/* 4) Typography & rhythm tweaks */
+.section-header{ margin-bottom: var(--s6); }
+.hero-badges{ margin-top: var(--s3); }
+.btn{ text-decoration: none; }
+
+/* 5) Contact / inner pages: make header consistent if old classes leak in */
+nav.top.nav{ display: none; }            /* hide legacy header if present */
+.page-hero .lead, .page-hero p{ font-size: 1rem; color: var(--muted); }
+
 /* Breadcrumbs (if present on older pages) */
 .breadcrumbs { margin: var(--s2) 0; color: var(--muted); font-size: .95rem; }
 .breadcrumbs a { color: inherit; }
