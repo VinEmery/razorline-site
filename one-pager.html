@@ -4,56 +4,95 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>One-pager | Razorline Labs</title>
-  <meta name="description" content="Overzicht van aanbod, prijzen en evidence. Sprints, geen audits. NIS2/DORA/AI Act live in 6–10 weken." />
-  <link rel="canonical" href="https://razorlinelabs.nl/onepager.html" />
-  <link rel="alternate" hreflang="en" href="https://razorlinelabs.nl/en/onepager.html" />
-  <link rel="alternate" hreflang="nl" href="https://razorlinelabs.nl/onepager.html" />
-  <link rel="alternate" hreflang="x-default" href="https://razorlinelabs.nl/en/onepager.html" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <meta name="description" content="Overzicht van aanbod, prijzen en evidence. Sprints, geen audits. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven." />
+
+  <link rel="canonical" href="https://razorlinelabs.nl/one-pager.html" />
+  <link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="nl" />
+  <link rel="alternate" href="https://razorlinelabs.nl/en/one-pager.html" hreflang="en" />
+  <link rel="alternate" href="https://razorlinelabs.nl/one-pager.html" hreflang="x-default" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://razorlinelabs.nl/one-pager.html" />
+  <meta property="og:title" content="One-pager | Razorline Labs" />
+  <meta property="og:description" content="Overzicht, prijzen en evidence. Sprints, geen audits. NIS2/DORA/AI Act live in 6–10 weken." />
+  <meta property="og:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="One-pager | Razorline Labs" />
+  <meta name="twitter:description" content="Overzicht, prijzen en evidence. Sprints, geen audits. NIS2/DORA/AI Act live in 6–10 weken." />
+  <meta name="twitter:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Analytics -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Org JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Razorline Labs","url":"https://razorlinelabs.nl","email":"hello@razorlinelabs.nl","logo":"https://razorlinelabs.nl/favicon.svg"}
+  </script>
 </head>
 <body>
+  <!-- Nav -->
   <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="/"><span>RAZORLINE</span> LABS</a>
-      <nav class="header-actions">
-        <a class="lang-switch" href="/?lang=nl">NL</a>
-        <a class="lang-switch inactive" href="/en/onepager.html">EN</a>
-        <a class="btn btn-primary" href="/contact.html">15-min check</a>
+    <div class="container nav">
+      <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+      <nav class="nav-actions">
+        <a class="lang-pill is-active" href="/" aria-current="page">NL</a>
+        <a class="lang-pill" href="/en/one-pager.html">EN</a>
+        <a class="btn btn-primary" href="/contact.html#book">15-min check</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero subtle-splash">
-      <div class="container">
-        <nav class="breadcrumbs"><a href="/">Home</a> / <span>One-pager</span></nav>
-        <h1>One-pager</h1>
-        <p class="lead">Overzicht, prijzen en bewijs. Download direct of plan een korte check.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/contact.html">Plan een check van 15 min</a>
-        </div>
+  <!-- Page hero -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">One-pager</span>
+      <h1>Alles in één: aanbod, prijzen & evidence</h1>
+      <p> Sprints, geen audits. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven. </p>
+      <div style="margin-top: var(--s3)">
+        <a class="btn btn-primary" href="/contact.html#book">Plan 15 min</a>
+        <a class="btn btn-ghost" href="/assets/razorline-one-pager.pdf" download>Download one-pager (PDF)</a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <section class="container section-pad">
-      <div class="card">
-        <h2>Download</h2>
-        <p>Je kunt de one-pager downloaden als PDF:</p>
-        <p><a class="btn btn-ghost" href="/assets/razorline-onepager.pdf">Download PDF</a></p>
-        <p class="muted">Geen PDF? Dan is dit een webversie. Stuur gerust een mail naar <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a> en we mailen je de PDF.</p>
+  <main>
+    <section class="section">
+      <div class="container grid" style="grid-template-columns: 1fr;">
+        <div class="card" style="padding: var(--s4)">
+          <h2 style="margin-top:0">Wat je krijgt</h2>
+          <ul>
+            <li>Overzicht van alle sprints (OTel Spend-Down, EKS/RDS Rightsizing, LLM Cost & Safety, CI/CD hardening, IDP quickstart)</li>
+            <li>Concrete deliverables + acceptatiecriteria</li>
+            <li>Indicatieve prijzen en doorlooptijd</li>
+          </ul>
+          <p class="muted">Heb je liever de PDF in je inbox? Mail <a href="mailto:hello@razorlinelabs.nl">hello@razorlinelabs.nl</a>.</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-row">
-      <small>© Razorline Labs</small>
-      <nav class="footer-nav">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
+        <p class="muted">EU-first engineering studio. Sprints, geen audits.</p>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/contact.html#book">Contact</a></li>
+          <li><a href="/assets/razorline-one-pager.pdf" download>One-pager (PDF)</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
   </footer>
+
+  <script src="/site.js" defer></script>
 </body>
 </html>
