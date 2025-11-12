@@ -24,8 +24,25 @@
   <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en" />
   <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default" />
 
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <!-- Favicon + CSS -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Analytics (Plausible) -->
+  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Razorline Labs",
+    "url":"https://razorlinelabs.nl",
+    "email":"hello@razorlinelabs.nl",
+    "description":"DevOps & Platform Engineering consultancy in the Netherlands. Compliance-aware (NIS2/DORA/AI Act), FinOps, Kubernetes, Terraform, CI/CD.",
+    "logo":"https://razorlinelabs.nl/favicon.svg"
+  }
+  </script>
 </head>
 <body>
   <!-- Nav -->
@@ -36,7 +53,7 @@
       <nav class="nav-actions">
         <a class="lang-pill is-active" href="/" aria-current="page">NL</a>
         <a class="lang-pill" href="/en/">EN</a>
-        <a class="btn btn-primary" href="/contact.html">15-min check</a>
+        <a class="btn btn-primary" href="/contact.html#book" data-track="book-15-top">15-min check</a>
       </nav>
     </div>
   </header>
@@ -51,7 +68,8 @@
       </p>
 
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="/contact.html">Plan een check van 15 min</a>
+        <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-hero" aria-label="Plan een check van 15 minuten">Plan een check van 15 min</a>
+        <a class="btn btn-ghost btn-lg" href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-hero" aria-label="Download de one-pager PDF">Download one-pager</a>
       </div>
 
       <ul class="hero-badges">
@@ -75,16 +93,14 @@
 
         <a class="card card-service" href="/service-otel-spend-down.html">
           <div class="card-icon">
-            <!-- Gauge / telemetry icon -->
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3Z"/><path d="M13 13 19 7" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <h3>Datadog → OTel Spend-Down</h3>
           <p>14 dagen om observability-kosten te verlagen zonder signaalverlies.</p>
         </a>
 
-        <a class="card card-service" href="/service-llm-tune-up.html">
+        <a class="card card-service" href="/service-llm-tuneup.html">
           <div class="card-icon">
-            <!-- Brain / AI icon -->
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7a3 3 0 1 1 3-3v16a3 3 0 1 1-3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3"/></svg>
           </div>
           <h3>LLM-kosten &amp; Safety Tune-Up</h3>
@@ -93,16 +109,14 @@
 
         <a class="card card-service" href="/service-eks-rightsizing.html">
           <div class="card-icon">
-            <!-- Cloud / nodes icon -->
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17h10a4 4 0 1 0-.7-7.95A6 6 0 0 0 5 10a4 4 0 0 0 2 7Z"/></svg>
           </div>
           <h3>AWS EKS + RDS Rightsizing</h3>
           <p>Snelle, meetbare infra-winst met PR’s en dashboards.</p>
         </a>
 
-        <a class="card card-service" href="/onepager.html">
+        <a class="card card-service" href="/one-pager.html">
           <div class="card-icon">
-            <!-- Doc icon -->
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v6h6"/></svg>
           </div>
           <h3>One-pager</h3>
@@ -179,7 +193,6 @@
       </header>
 
       <div class="logo-row">
-        <!-- Replace src values with real logo files when ready (SVG/PNG). -->
         <figure class="logo">
           <img src="/assets/logos/fintech.svg" alt="Fintech" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
           <figcaption>Fintech</figcaption>
@@ -223,7 +236,7 @@
 
   <!-- Sticky CTA -->
   <div class="sticky-cta">
-    <a class="btn btn-primary btn-lg" href="/contact.html">Plan 15 min</a>
+    <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-sticky">Plan 15 min</a>
   </div>
 
   <!-- Footer -->
@@ -236,11 +249,15 @@
       <div class="footer-col">
         <ul class="footer-links">
           <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html#book" data-track="book-15-footer">Contact</a></li>
+          <li><a href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-footer">One-pager (PDF)</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
   </footer>
+
+  <!-- Minimal click tracking -->
+  <script src="/site.js" defer></script>
 </body>
 </html>
