@@ -255,3 +255,30 @@ nav.top.nav{ display: none; }            /* hide legacy header if present */
 .breadcrumbs ol { margin: 0; padding: 0; list-style: none; display: flex; gap: .5rem; }
 .breadcrumbs li + li::before { content: "/"; color: #c5ced8; margin-right: .5rem; }
 
+/* === Razorline Labs — visual polish overrides === */
+
+/* Keep layout tight and premium */
+.container{ max-width:1080px; }
+
+/* Services: 3-up, no skinny cards */
+.grid-services{ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/* Stack icon above text so copy gets full width */
+.card-service{
+  grid-template-columns: 1fr;
+  gap: var(--s2);
+  padding: var(--s4);
+}
+.card-service .card-icon{ width:48px; height:48px; margin-bottom:.25rem; }
+.card-service h3{ font-size:1.1rem; }
+.card-service p{ max-width:56ch; }
+
+/* Inner page hero tone down + spacing */
+.page-hero{
+  padding: clamp(56px,7vw,96px) 0 clamp(28px,4vw,48px);
+  background: radial-gradient(1200px 420px at 10% 0%, #f1fffd 0%, #ffffff 60%);
+}
+
+/* Hide legacy top nav if present (contact page) */
+nav.top.nav{ display:none; }
+
