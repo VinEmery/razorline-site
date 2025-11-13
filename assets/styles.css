@@ -282,3 +282,13 @@ nav.top.nav{ display: none; }            /* hide legacy header if present */
 /* Hide legacy top nav if present (contact page) */
 nav.top.nav{ display:none; }
 
+/* === Balance the Services grid: 2×2 on desktop, no orphan card === */
+.grid-services { grid-template-columns: 1fr; }             /* mobile */
+@media (min-width: 720px){
+  .grid-services { grid-template-columns: repeat(2, minmax(360px, 1fr)); }
+}
+/* If you ever add 6+ services and want 3-up at big widths, uncomment:
+@media (min-width: 1280px){
+  .grid-services { grid-template-columns: repeat(3, minmax(340px, 1fr)); }
+}
+*/
