@@ -1,263 +1,108 @@
-<!doctype html>
-<html lang="nl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Razorline Labs — Sprints, geen audits.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razorline Labs — AI Systems & Automation Architecture</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #111; background: #f7f7f7; }
+    header { background: #0a0a0a; color: #fff; padding: 60px 30px; text-align: center; }
+    header h1 { font-size: 42px; margin-bottom: 15px; }
+    header p { font-size: 20px; margin-bottom: 20px; }
+    .cta-btn { background: #4f8cff; color: #fff; padding: 14px 26px; border-radius: 8px; text-decoration: none; font-size: 18px; }
 
-  <meta name="description" content="Sprints die je kunt mergen. Evidence waar je auditor op klikt. NIS2/DORA/AI Act live in 6–10 weken. 15–30% besparing zonder herschrijven." />
-  <link rel="canonical" href="https://razorlinelabs.nl/" />
+    section { padding: 60px 30px; max-width: 950px; margin: auto; }
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://razorlinelabs.nl/" />
-  <meta property="og:title" content="Razorline Labs — Sprints, geen audits." />
-  <meta property="og:description" content="NIS2/DORA/AI Act live in 6–10 weken. Evidence by default. 15–30% besparing zonder herschrijven." />
-  <meta property="og:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Razorline Labs — Sprints, geen audits." />
-  <meta name="twitter:description" content="NIS2/DORA/AI Act live in 6–10 weken. Evidence by default. 15–30% besparing zonder herschrijven." />
-  <meta name="twitter:image" content="https://razorlinelabs.nl/assets/og-image-blue.png" />
+    h2 { font-size: 34px; margin-bottom: 25px; color: #0a0a0a; }
+    h3 { font-size: 24px; margin-bottom: 10px; }
+    .service-box { background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+    ul { margin-top: 10px; }
 
-  <!-- hreflang -->
-  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="nl" />
-  <link rel="alternate" href="https://razorlinelabs.nl/en/" hreflang="en" />
-  <link rel="alternate" href="https://razorlinelabs.nl/" hreflang="x-default" />
-
-  <!-- Favicon + CSS -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-
-  <!-- Analytics (Plausible) -->
-  <script defer data-domain="razorlinelabs.nl" src="https://plausible.io/js/script.js"></script>
-
-  <!-- Org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Razorline Labs",
-    "url":"https://razorlinelabs.nl",
-    "email":"hello@razorlinelabs.nl",
-    "description":"DevOps & Platform Engineering consultancy in the Netherlands. Compliance-aware (NIS2/DORA/AI Act), FinOps, Kubernetes, Terraform, CI/CD.",
-    "logo":"https://razorlinelabs.nl/favicon.svg"
-  }
-  </script>
+    .footer { text-align: center; padding: 40px 20px; background: #111; color: #fff; font-size: 14px; }
+  </style>
 </head>
 <body>
-  <!-- Nav -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
 
-      <nav class="nav-actions">
-        <a class="lang-pill is-active" href="/" aria-current="page">NL</a>
-        <a class="lang-pill" href="/en/">EN</a>
-        <a class="btn btn-primary" href="/contact.html#book" data-track="book-15-top">15-min check</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <h1>We Build the AI Systems That Run Your Business</h1>
+  <p>Multi-agent AI • RAG Knowledge Systems • Automation Architecture • AI Ops</p>
+  <a class="cta-btn" href="#contact">Book a 20‑min Architecture Audit</a>
+</header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">Sprints, geen audits.</h1>
-      <p class="hero-sub">
-        Controls die je merge’t. Evidence waar je auditor op klikt.
-        NIS2/DORA/AI Act live in <strong>6–10 weken</strong>. <strong>15–30%</strong> besparing zonder herschrijven.
-      </p>
+<section>
+  <h2>Our Core Services</h2>
 
-      <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-hero" aria-label="Plan een check van 15 minuten">Plan een check van 15 min</a>
-        <a class="btn btn-ghost btn-lg" href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-hero" aria-label="Download de one-pager PDF">Download one-pager</a>
-      </div>
-
-      <ul class="hero-badges">
-        <li>Vaste scope &amp; tijd (4–10 wkn)</li>
-        <li>Evidence by default (exports)</li>
-        <li>EU-first · geen lock-in</li>
-        <li>Optioneel: fee uit besparing</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Diensten -->
-  <section id="diensten" class="section">
-    <div class="container">
-      <header class="section-header">
-        <span class="section-kicker">Onze diensten</span>
-        <h2 class="section-title">Diensten</h2>
-      </header>
-
-      <div class="grid grid-services">
-
-        <a class="card card-service" href="/service-otel-spend-down.html">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3Z"/><path d="M13 13 19 7" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Datadog → OTel Spend-Down</h3>
-          <p>14 dagen om observability-kosten te verlagen zonder signaalverlies.</p>
-        </a>
-
-        <a class="card card-service" href="/service-llm-tuneup.html">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7a3 3 0 1 1 3-3v16a3 3 0 1 1-3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3 3 3 0 1 1 3-3"/></svg>
-          </div>
-          <h3>LLM-kosten &amp; Safety Tune-Up</h3>
-          <p>Lagere inference-kosten + AI-Act-klare gates en logs.</p>
-        </a>
-
-        <a class="card card-service" href="/service-eks-rightsizing.html">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17h10a4 4 0 1 0-.7-7.95A6 6 0 0 0 5 10a4 4 0 0 0 2 7Z"/></svg>
-          </div>
-          <h3>AWS EKS + RDS Rightsizing</h3>
-          <p>Snelle, meetbare infra-winst met PR’s en dashboards.</p>
-        </a>
-
-        <a class="card card-service" href="/one-pager.html">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v6h6"/></svg>
-          </div>
-          <h3>One-pager</h3>
-          <p>Overzicht, prijzen en bewijs.</p>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Werkwijze -->
-  <section id="werkwijze" class="section section--band">
-    <div class="container">
-      <header class="section-header">
-        <span class="section-kicker">Zo werken we</span>
-        <h2 class="section-title">Werkwijze</h2>
-      </header>
-
-      <div class="grid grid-steps">
-        <div class="card card-step">
-          <div class="step-dot">1</div>
-          <h3>Read-only check (72u)</h3>
-          <p>Snelle scan, risico’s &amp; besparingspunten met plan van aanpak.</p>
-        </div>
-
-        <div class="card card-step">
-          <div class="step-dot">2</div>
-          <h3>Sprint (4–10 wkn)</h3>
-          <p>Repo-artefacts, PR’s, runbooks en exports — <em>evidence by default</em>.</p>
-        </div>
-
-        <div class="card card-step">
-          <div class="step-dot">3</div>
-          <h3>Acceptatie &amp; overdracht</h3>
-          <p>Auditor-klare bestanden, demo, en optionele maandelijkse care.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header">
-        <span class="section-kicker">Wat klanten zeggen</span>
-        <h2 class="section-title">Resultaten</h2>
-      </header>
-
-      <div class="grid grid-quotes">
-        <blockquote class="quote">
-          “Binnen 6 weken live met NIS2-evidence die onze auditor zó kon verifiëren.”
-          <footer>— CISO, fintech</footer>
-        </blockquote>
-
-        <blockquote class="quote">
-          “15% lager Datadog-verbruik zonder SLO-impact. Heldere PR’s en dashboards.”
-          <footer>— Head of Platform</footer>
-        </blockquote>
-
-        <blockquote class="quote">
-          “LLM-kosten omlaag, safety omhoog. Evals + HITL-gates waren precies wat we nodig hadden.”
-          <footer>— Product lead AI</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- Logos -->
-  <section id="logos" class="section logos-band">
-    <div class="container">
-      <header class="section-header">
-        <span class="section-kicker">Vertrouwd door teams in</span>
-        <h2 class="section-title">Sectoren</h2>
-      </header>
-
-      <div class="logo-row">
-        <figure class="logo">
-          <img src="/assets/logos/fintech.svg" alt="Fintech" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
-          <figcaption>Fintech</figcaption>
-        </figure>
-        <figure class="logo">
-          <img src="/assets/logos/health.svg" alt="Healthcare" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
-          <figcaption>Healthcare</figcaption>
-        </figure>
-        <figure class="logo">
-          <img src="/assets/logos/saas.svg" alt="SaaS" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
-          <figcaption>SaaS</figcaption>
-        </figure>
-        <figure class="logo">
-          <img src="/assets/logos/retail.svg" alt="Retail" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
-          <figcaption>Retail</figcaption>
-        </figure>
-        <figure class="logo">
-          <img src="/assets/logos/public.svg" alt="Publieke sector" onerror="this.closest('figure').classList.add('logo-placeholder'); this.remove();" />
-          <figcaption>Publiek</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header">
-        <span class="section-kicker">FAQ</span>
-        <h2 class="section-title">Veelgestelde vragen</h2>
-      </header>
-
-      <details class="faq-item">
-        <summary>Werkt ‘pay-from-savings’ altijd?</summary>
-        <div class="faq-body">
-          <p>Nee. Als er onvoldoende besparingspotentieel is (of als de case vooral compliance-gedreven is), werken we met vaste prijs.</p>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <!-- Sticky CTA -->
-  <div class="sticky-cta">
-    <a class="btn btn-primary btn-lg" href="/contact.html#book" data-track="book-15-sticky">Plan 15 min</a>
+  <div class="service-box">
+    <h3>AI Systems Architecture Blueprint — €2,500</h3>
+    <p>A 2–3 week audit and architecture plan that maps out how AI can automate your workflows end‑to‑end.</p>
+    <ul>
+      <li>Process mapping & automation opportunity assessment</li>
+      <li>Agent and RAG architecture diagrams</li>
+      <li>Integration plan and technical recommendations</li>
+      <li>ROI estimate + delivery roadmap</li>
+    </ul>
   </div>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <a class="brand" href="/">RAZORLINE <span>LABS</span></a>
-        <p class="muted">EU-first engineering studio. Sprints, geen audits.</p>
-      </div>
-      <div class="footer-col">
-        <ul class="footer-links">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/contact.html#book" data-track="book-15-footer">Contact</a></li>
-          <li><a href="/assets/razorline-one-pager.pdf" download data-track="download-onepager-footer">One-pager (PDF)</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-copy">© Razorline Labs · hello@razorlinelabs.nl · razorlinelabs.nl</div>
-  </footer>
+  <div class="service-box">
+    <h3>Custom AI System Buildout — €12k–€60k</h3>
+    <p>We design and deploy production-grade AI systems that automate business operations and decision flows.</p>
+    <ul>
+      <li>Multi-agent workflows</li>
+      <li>RAG pipelines + vector DB setup</li>
+      <li>Integrations with CRM/ERP/API systems</li>
+      <li>Testing, deployment, dashboards & monitoring</li>
+    </ul>
+  </div>
 
-  <!-- Minimal click tracking -->
-  <script src="/site.js" defer></script>
+  <div class="service-box">
+    <h3>AI Ops Retainer — €1,500–€6,000 / month</h3>
+    <p>Ongoing maintenance and optimization to ensure your AI systems remain accurate, reliable, and high‑ROI.</p>
+    <ul>
+      <li>Performance monitoring & incident handling</li>
+      <li>Prompt tuning + embedding refresh cycles</li>
+      <li>Drift detection and retraining triggers</li>
+      <li>Monthly system performance report</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Example Systems</h2>
+
+  <div class="service-box">
+    <h3>Support Agent with Memory & Escalation</h3>
+    <p>Automated customer support using multi-agent triage, RAG, escalation logic, and structured response generation.</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Sales Follow‑Up Agent Suite</h3>
+    <p>Automates lead detection, personalized outreach, meeting scheduling, CRM updates, and multi-step workflows.</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Finance Reconciliation Pipeline</h3>
+    <p>End‑to‑end ingestion, matching, discrepancy flagging, and automated monthly reconciliation reporting.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Interested in an audit, system build, or long‑term AI Ops? Book your session:</p>
+  <p><a class="cta-btn" href="#">Schedule Architecture Audit</a></p>
+</section>
+
+<div class="footer">
+  © 2025 Razorline Labs — AI Systems & Automation Architecture
+</div>
+
+  
+  <!-- ===== HOW TO USE THIS FILE =====
+  1. Replace your current index.html with this one.
+  2. If your repository separates CSS, copy everything inside <style>...</style>
+     into your style.css and remove the <style> tag here.
+  3. Update links, brand assets, and images as needed.
+  4. Deploy normally via GitHub Pages / Vercel / Netlify.  
+  ==================================== -->
+
 </body>
 </html>
