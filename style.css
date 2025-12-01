@@ -85,6 +85,9 @@ a:hover { text-decoration: underline; }
 /* HERO */
 .hero {
   padding: 70px 20px 50px;
+  background-image: url('assets/razorline_hero_bg_1920x600.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-inner {
